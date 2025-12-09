@@ -71,7 +71,7 @@ def main() -> None:
         ("inspladdefectdetection", "insplad-defect-detection", "insplad_defect"),
         ("hehe-2moxl", "power-grid-inspection-dvwun", "power_grid_inspection"),
         ("yolov11-tasks", "damper-defect-detection", "damper_defect_detection"),
-        ("abcd-fx82k", "insulator-lgust", "insulator_defect") 
+        ("abcd-fx82k", "insulator-lgust", "insulator_defect"),
     ]
 
     for workspace, project, target_name in datasets:

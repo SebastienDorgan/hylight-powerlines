@@ -85,10 +85,7 @@ class YoloFineTuner:
         # Map "auto" to 0 (Ultralytics convention for automatic batch size)
         if isinstance(self.batch, str):
             if self.batch != "auto":
-                raise ValueError(
-                    f"Invalid batch value {self.batch!r}. "
-                    "Use an int/float or 'auto'."
-                )
+                raise ValueError(f"Invalid batch value {self.batch!r}. Use an int/float or 'auto'.")
             batch_value: int | float = 0
         else:
             batch_value = self.batch

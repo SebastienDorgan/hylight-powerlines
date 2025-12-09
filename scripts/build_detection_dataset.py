@@ -1,7 +1,6 @@
-
 from pathlib import Path
 
-from hylight_powerlines.datasets import merge_yolo_datasets
+from hylight_powerlines.merge import merge_yolo_datasets
 
 if __name__ == "__main__":
     root_path = Path("data")

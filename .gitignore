@@ -222,5 +222,8 @@ scratch.py
 .images
 assets
 data/detection_dataset
+data/detection_dataset_curated
 data/external
 yolo*.pt
+*.pdf
+runs*

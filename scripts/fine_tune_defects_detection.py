@@ -10,11 +10,11 @@ def main() -> None:
 
     tuner = YoloFineTuner(
         dataset_root=dataset_root,
-        model_name="yolov8s.pt",      # or "yolo11s.pt" if you prefer
+        model_name="yolov8s.pt",  # or "yolo11s.pt" if you prefer
         epochs=100,
         img_size=1024,
-        batch=0,                      # 0 => auto-batch with your patched class
-        device="0",                   # or "cpu"
+        batch=0,  # 0 => auto-batch with your patched class
+        device="0",  # or "cpu"
         project="runs/defects",
         run_name="yolov8s-defects-4cls",
         seed=0,

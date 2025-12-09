@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolov8s.pt
-data: /home/seb/Documents/1-HyLight/hylight-powerlines/data/detection_dataset/data.yaml
+data: /home/seb/Documents/1-HyLight/hylight-powerlines/data/detection_dataset_curated/data.yaml
 epochs: 100
 time: null
 patience: 20
