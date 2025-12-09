@@ -1,0 +1,77 @@
+# config/label_mapping.yaml
+classes:
+  0: tower
+  1: insulator
+  2: spacer
+  3: damper
+  4: tower_plate
+  5: conductor
+
+datasets:
+  combine_pole:
+    pole_top: tower
+
+  electric_pole_merged:
+    electric_pole: tower
+
+  electrical_line:
+    Cable: conductor
+    Wire: conductor
+
+  pylon_components:
+    insolator: insulator
+    covered_insolator: insulator
+
+  ps1_v2:
+    tower: tower
+    insulator: insulator
+    spacer: spacer
+    damper: damper
+    plate: tower_plate
+
+  damper_defect_detection:
+    Broken_damper: damper
+    Intact_damper: damper
+
+  power_grid_inspection:
+    Bent_Insulator: insulator
+    Broken_Insulator_Cap: insulator
+    Insulator: insulator
+    Insulator_Cap: insulator
+    Spacer: spacer
+    Damper: damper
+    Damaged_Cable_Jackets: conductor
+    Frayed_Cable: conductor
+    Tangled_Object: null
+    Transformer: null
+
+  insplad_defect:
+    insulator: insulator
+    glass insulator: insulator
+    glass insulator big shackle: insulator
+    glass insulator small shackle: insulator
+    glass insulator tower shackle: insulator
+    polymer insulator: insulator
+    polymer insulator lower shackle: insulator
+    polymer insulator upper shackle: insulator
+    polymer insulator tower shackle: insulator
+
+    spacer: spacer
+
+    spiral damper: damper
+    stockbridge damper: damper
+
+    tower id plate: tower_plate
+
+    balloon: null
+    burst: null
+    defect: null
+    kite: null
+    lightning rod shackle: null
+    lightning rod suspension: null
+    nest: null
+    sphere: null
+    trash: null
+    vari-grip: null
+    yoke: null
+    yoke suspension: null

@@ -1,0 +1,51 @@
+[project]
+name = "hylight-powerlines"
+version = "0.1.0"
+description = "Automated tool to detect and classify defects on powerlines and pylons."
+readme = "README.md"
+authors = [
+  { name = "Seb", email = "sebsatien.dorgan@gmail.com" }
+]
+requires-python = ">=3.14"
+
+dependencies = [
+  "fsspec>=2025.10.0",
+  "httpx>=0.28.1",
+  "pillow>=12.0.0",
+  "pydrive2[fsspec]>=1.21.3",
+  "shapely>=2.1.2",
+  "ultralytics>=8.3.235",
+]
+
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+  "ruff>=0.14.6",
+  "pytest>=9.0.1",
+  "pytest-cov>=7.0.0",
+  "pyrefly>=0.43.1",  # current latest on PyPI at the time of writing
+  "ipykernel>=7.1.0",
+]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# Pyrefly config lives here; no separate file needed
+[tool.pyrefly]
+# Include both src and tests in type-checking
+search_path = [
+  "src",
+  "tests",
+]

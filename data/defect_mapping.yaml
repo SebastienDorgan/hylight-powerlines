@@ -1,0 +1,62 @@
+# config/defect_label_mapping.yaml
+
+classes:
+  0: insulator_defect
+  1: damper_defect
+  2: conductor_defect
+  3: foreign_object
+
+datasets:
+  damper_defect_detection:
+    # Only broken is a defect; intact dampers are background
+    Broken_damper: damper_defect
+    Intact_damper: null
+
+  power_grid_inspection:
+    # Explicit insulator/cable defects
+    Bent_Insulator: insulator_defect
+    Broken_Insulator_Cap: insulator_defect
+    Damaged_Cable_Jackets: conductor_defect
+    Frayed_Cable: conductor_defect
+
+    # Foreign objects
+    Tangled_Object: foreign_object
+
+    # Normal components -> background
+    Insulator: null
+    Insulator_Cap: null
+    Spacer: null
+    Damper: null
+    Transformer: null
+
+  insplad_defect:
+    # Insulator defects
+    defect: insulator_defect
+    burst: insulator_defect
+
+    # Foreign objects
+    balloon: foreign_object
+    kite: foreign_object
+    nest: foreign_object
+    trash: foreign_object
+    sphere: foreign_object
+
+    # Everything else treated as background (normal components)
+    insulator: null
+    glass insulator: null
+    glass insulator big shackle: null
+    glass insulator small shackle: null
+    glass insulator tower shackle: null
+    polymer insulator: null
+    polymer insulator lower shackle: null
+    polymer insulator upper shackle: null
+    polymer insulator tower shackle: null
+    spacer: null
+    spiral damper: null
+    stockbridge damper: null
+    tower id plate: null
+    vari-grip: null
+    yoke: null
+    yoke suspension: null
+    lightning rod shackle: null
+    lightning rod suspension: null
