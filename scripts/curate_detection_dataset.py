@@ -12,7 +12,6 @@ def main() -> None:
         "electric_pole_merged",
         "power_grid_inspection",
         "pylon_components",
-        "damper_defect_detection",
         "electrical_line",
     ]
 
@@ -20,7 +19,7 @@ def main() -> None:
         source_root=source_root,
         dest_root=dest_root,
         keep_sources=keep_sources,
-        drop_class="spacer",
+        drop_classes=["spacer", "damper", "conductor", "tower_plate"],
     )
 
 

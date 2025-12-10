@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import os
 from dataclasses import dataclass
 from pathlib import Path
@@ -8,6 +9,7 @@ from typing import Any, Final, Literal
 
 import httpx
 
+LOG = logging.getLogger(__name__)
 DEFAULT_API_BASE: Final[str] = "https://api.roboflow.com"
 DEFAULT_API_KEY_ENV: Final[str] = "ROBOFLOW_API_KEY"
 
@@ -127,7 +129,7 @@ class RoboflowDownloader:
             )
 
         self.version = latest
-        print(f"[RoboflowDownloader] Resolved latest version: {latest}")
+        LOG.info(f"[RoboflowDownloader] Resolved latest version: {latest}")
         return latest
 
     def build_export_url(self, api_key: str | None = None) -> str:
@@ -266,18 +268,18 @@ class RoboflowDownloader:
             metadata = self.download_export_metadata(api_key=api_key)
 
             if log_metadata:
-                print("Export metadata:")
+                LOG.info("Export metadata:")
                 text = json.dumps(metadata, indent=2)
                 if metadata_truncate is not None and len(text) > metadata_truncate:
                     text = text[:metadata_truncate] + "\n... (truncated)"
-                print(text)
+                LOG.info(text)
 
             zip_url = self.extract_export_link(metadata)
-            print(f"Downloading ZIP from: {zip_url}")
+            LOG.info(f"Downloading ZIP from: {zip_url}")
 
             try:
                 out_zip = self.download_zip(zip_url, dest)
-                print(f"Dataset ZIP saved to: {out_zip}")
+                LOG.info(f"Dataset ZIP saved to: {out_zip}")
                 return out_zip
             except httpx.HTTPStatusError as exc:
                 # Retry only on 404 from the storage backend
@@ -287,7 +289,7 @@ class RoboflowDownloader:
                     and attempt < max_retries
                 ):
                     attempt += 1
-                    print(
+                    LOG.info(
                         f"Got 404 from storage, retrying export "
                         f"(attempt {attempt + 1}/{max_retries + 1})..."
                     )

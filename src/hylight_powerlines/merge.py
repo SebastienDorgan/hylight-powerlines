@@ -1,3 +1,4 @@
+import logging
 import shutil
 from dataclasses import dataclass
 from pathlib import Path
@@ -6,6 +7,7 @@ from typing import Any
 import yaml
 from shapely.geometry import Polygon
 
+LOG = logging.getLogger(__name__)
 
 @dataclass
 class LabelMapping:
@@ -140,13 +142,13 @@ def merge_one_dataset(
       the polygon is converted to a bounding box using shapely, and only
       the detection bbox is written out.
     """
-    print(f"\n=== Merging dataset '{ds_key}' from {ds_root} ===")
+    LOG.info(f"\n=== Merging dataset '{ds_key}' from {ds_root} ===")
 
     orig_names = load_dataset_names_yaml(ds_root)
 
     ds_label_map = label_mapping.dataset_label_map.get(ds_key)
     if ds_label_map is None:
-        print(f"[INFO] No label mapping defined for dataset '{ds_key}', skipping.")
+        LOG.info(f"[INFO] No label mapping defined for dataset '{ds_key}', skipping.")
         return
 
     # Build index -> target_index mapping for this dataset
@@ -168,7 +170,7 @@ def merge_one_dataset(
 
     split_map = detect_splits(ds_root)
     if not split_map:
-        print(f"[WARN] No train/valid/val/test splits found in {ds_root}, skipping.")
+        LOG.info(f"[WARN] No train/valid/val/test splits found in {ds_root}, skipping.")
         return
 
     for src_split, dest_split in split_map.items():
@@ -176,7 +178,7 @@ def merge_one_dataset(
         src_labels = ds_root / src_split / "labels"
 
         if not src_images.exists() or not src_labels.exists():
-            print(
+            LOG.info(
                 f"[WARN] Missing images/labels for split '{src_split}' in {ds_root}, "
                 "skipping this split."
             )
@@ -187,10 +189,10 @@ def merge_one_dataset(
 
         img_files = iter_image_files(src_images)
         if not img_files:
-            print(f"[INFO] No images found in {src_images}, skipping.")
+            LOG.info(f"[INFO] No images found in {src_images}, skipping.")
             continue
 
-        print(f"  Split '{src_split}' -> '{dest_split}': {len(img_files)} images")
+        LOG.info(f"  Split '{src_split}' -> '{dest_split}': {len(img_files)} images")
 
         for img_path in img_files:
             stem = img_path.stem
@@ -269,7 +271,7 @@ def write_merged_data_yaml(label_mapping: LabelMapping, dest_root: Path) -> None
     out_path = dest_root / "data.yaml"
     with out_path.open("w", encoding="utf-8") as f:
         yaml.safe_dump(data, f, sort_keys=False)
-    print(f"\nWrote merged data.yaml to {out_path}")
+    LOG.info(f"\nWrote merged data.yaml to {out_path}")
 
 
 def merge_yolo_datasets(
@@ -294,9 +296,9 @@ def merge_yolo_datasets(
             continue
         ds_key = ds_dir.name
         if ds_key not in label_mapping.dataset_label_map:
-            print(f"[INFO] No mapping for dataset '{ds_key}', skipping.")
+            LOG.info(f"[INFO] No mapping for dataset '{ds_key}', skipping.")
             continue
         merge_one_dataset(ds_key, ds_dir, label_mapping, dest_root, counters)
 
     write_merged_data_yaml(label_mapping, dest_root)
-    print("\nMerge completed.")
+    LOG.info("\nMerge completed.")

@@ -1,3 +1,4 @@
+import logging
 import shutil
 from collections.abc import Iterable, Sequence
 from pathlib import Path
@@ -5,6 +6,7 @@ from typing import Any
 
 import yaml
 
+LOG = logging.getLogger(__name__)
 
 def _load_class_names(data_yaml: Path) -> list[str]:
     """Load class names from a YOLO data.yaml (supports list or dict)."""
@@ -28,7 +30,7 @@ def _load_class_names(data_yaml: Path) -> list[str]:
 
 def _build_id_map(
     old_names: Sequence[str],
-    drop_class: str,
+    drop_classes: list[str],
 ) -> tuple[dict[int, int | None], list[str]]:
     """Build mapping old_id -> new_id (or None) and resulting name list.
 
@@ -40,7 +42,7 @@ def _build_id_map(
     new_idx = 0
 
     for old_id, name in enumerate(old_names):
-        if name == drop_class:
+        if name in drop_classes:
             id_map[old_id] = None
         else:
             id_map[old_id] = new_idx
@@ -114,7 +116,7 @@ def curate_detection_dataset(
     source_root: Path,
     dest_root: Path,
     keep_sources: Iterable[str],
-    drop_class: str = "spacer",
+    drop_classes: list[str],
 ) -> None:
     """Curate a merged YOLO dataset.
 
@@ -145,9 +147,9 @@ def curate_detection_dataset(
 
     # Load class names and build id map (drop 'spacer', renumber others)
     old_names = _load_class_names(data_yaml)
-    id_map, new_names = _build_id_map(old_names, drop_class=drop_class)
-    print("Old classes:", old_names)
-    print(f"New classes (after dropping {drop_class!r}):", new_names)
+    id_map, new_names = _build_id_map(old_names, drop_classes=drop_classes)
+    LOG.info("Old classes:", old_names)
+    LOG.info(f"New classes (after dropping {drop_classes!r}):", new_names)
 
     # Copy/curate data split by split
     for split in ("train", "val", "test"):
@@ -155,7 +157,7 @@ def curate_detection_dataset(
         src_lbl_dir = source_root / split / "labels"
 
         if not src_img_dir.is_dir():
-            print(f"Warning: missing {src_img_dir}, skipping split {split}")
+            LOG.info(f"Warning: missing {src_img_dir}, skipping split {split}")
             continue
 
         dst_img_dir = dest_root / split / "images"
@@ -197,7 +199,7 @@ def curate_detection_dataset(
             shutil.copy2(img_path, dst_img_path)
             n_kept += 1
 
-        print(f"{split}: kept {n_kept} / {n_total} images")
+        LOG.info(f"{split}: kept {n_kept} / {n_total} images")
 
     # Build new data.yaml
     src_cfg = yaml.safe_load(data_yaml.read_text())
@@ -219,4 +221,4 @@ def curate_detection_dataset(
     dest_root.mkdir(parents=True, exist_ok=True)
     content = str(yaml.safe_dump(new_cfg, sort_keys=False))
     (dest_root / "data.yaml").write_text(content)
-    print(f"Curated data.yaml written to {dest_root / 'data.yaml'}")
+    LOG.info(f"Curated data.yaml written to {dest_root / 'data.yaml'}")
