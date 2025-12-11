@@ -18,8 +18,8 @@ From my understanding, the objective is not to fully annotate the provided datas
 *Assumptions*: 
 
 *- the goal of the technical test is not to manually annotate the provided dataset.*
-
 *- the goal of the technical test is not to benchmark state-of-the-art research NN models*
+
 
 ## Analysis of the provided test dataset
 
@@ -27,17 +27,7 @@ The test dataset contains 650 images of a medium-voltage overhead network with b
 
 No labels or metadata are provided about the presence or absence of defects. In addition, many of the defects defined in the reference document (“Test - Classification reseaux aeriens.pdf”) are subtle or only indirectly visible. At the resolution and viewpoints available, it is often difficult to reliably identify and label defects by visual inspection alone while remaining consistent with the reference classification.
 
-## Constraints and practical considerations
 
-The proposed strategy is driven by a set of practical constraints:
-
-* **Time**: the test must be completed in roughly one week, which rules out full manual annotation of 650 images and extensive hyperparameter sweeps.
-* **Data**: the test dataset is unlabeled and public datasets only partially match the target network (region, hardware types, voltage level).
-* **Resources**: the solution should run on a single standard laptop GPU/CPU without requiring large-scale distributed training.
-* **Tooling**: only open-source tools and publicly accessible datasets are assumed; no internal annotation teams or proprietary frameworks.
-* **Scope**: the objective is to demonstrate a coherent, reproducible pipeline rather than to chase marginal performance gains.
-
-These constraints justify the choice of YOLOv8s, reuse of public datasets, skipping class balancing, and relying on LLM-assisted pre-annotation only as an optional accelerator.
 
 ## Analysis of defect types in “Test - Classification reseaux aeriens.pdf”
 
@@ -64,6 +54,8 @@ Some defect categories are defined textually but have few or no visual examples 
 
 In section 4.2.4 on armaments, several different defect types (e.g. twisted, slipped, inappropriate, corroded) are grouped in a single descriptive line, while only two visual examples are provided for seven distinct defect situations. This lack of one-to-one correspondence between text and images makes it difficult to derive clear, separable visual classes that could be used as ground truth.
 
+
+
 ## Choice of external annotated datasets
 
 Based on the assumption that the test objective is not to manually annotate the provided 650 images, it is necessary to rely on public annotated datasets in order to:
@@ -79,6 +71,8 @@ However, the available public datasets do not exactly match the type of network 
 * The largest datasets often focus on extra-high voltage transmission lines with large lattice steel pylons, whereas the test images mainly show medium-voltage lines on wooden or concrete poles.
 
 These limitations affect both component detection (type and geometry of towers, insulators, conductors) and defect detection (type and appearance of damages).
+
+
 
 ## Construction of the component-detection dataset
 
@@ -107,6 +101,8 @@ All polygon annotations must therefore be converted to tight bounding boxes to o
 
 Because the datasets come from different sources, class distributions are imbalanced. A proper dataset design would require class balancing (downsampling frequent classes, oversampling or augmenting rare ones). Given the limited time available for this technical test, I explicitly choose to skip this balancing step and work with the raw class distribution.
 
+
+
 ## Construction of the defect-detection dataset
 
 The same harmonisation approach is applied to defect-oriented datasets, but this time only images with explicit defect labels are retained.
@@ -121,6 +117,8 @@ The process is:
 * Convert all annotations to bounding boxes, as for the component-detection dataset.
 
 This produces a second dataset focused on defect detection, which can be used to fine-tune a model on top of the component-detection backbone, or as a separate model depending on the chosen architecture.
+
+
 
 ## Choice of neural network architecture
 
@@ -144,6 +142,8 @@ To stay within the time constraints of the test and keep training efficient, I u
 * It still provides adequate detection performance for this exercise, especially when fine-tuned on the harmonised datasets.
 
 This choice offers a practical balance between **speed**, **implementation simplicity**, and **detection capability**, while keeping the pipeline compatible with a potential later migration to YOLOv11 or more specialised architectures if needed.
+
+
 
 ## Cropping component-centered patches for defect detection
 
@@ -175,6 +175,19 @@ The results were **qualitatively interesting**: for the tested subset, the model
 * Generate initial bounding boxes and labels for the component-detection dataset.
 * Reduce the manual effort to a faster “review and correction” pass instead of full annotation from scratch.
 
+
+## Constraints and practical considerations
+
+The proposed strategy is driven by a set of practical constraints:
+
+* **Time**: the test must be completed in roughly one week, which rules out full manual annotation of 650 images and extensive hyperparameter sweeps.
+* **Data**: the test dataset is unlabeled and public datasets only partially match the target network (region, hardware types, voltage level).
+* **Resources**: the solution should run on a single standard laptop GPU/CPU without requiring large-scale distributed training.
+* **Tooling**: only open-source tools and publicly accessible datasets are assumed; no internal annotation teams or proprietary frameworks.
+* **Scope**: the objective is to demonstrate a coherent, reproducible pipeline rather than to chase marginal performance gains.
+
+These constraints justify the choice of YOLOv8s, reuse of public datasets, skipping class balancing, and relying on LLM-assisted pre-annotation only as an optional accelerator.
+
 ## High-level pipeline overview
 
 The overall strategy can be summarised as a two-stage detection pipeline built on harmonised public datasets:
@@ -185,6 +198,7 @@ The overall strategy can be summarised as a two-stage detection pipeline built o
 4. Use Stage 1 outputs to generate component-centered crops (with padding) on both public datasets and the test images.
 5. Build and train a **Stage 2** model (detector or classifier) for defect detection on the component crops.
 6. Run the full pipeline on the 650 test images and review qualitative results to assess feasibility and typical failure modes.
+
 
 ## Evaluation strategy
 
@@ -216,13 +230,14 @@ The implementation can be organised as follow:
 * Train the Stage 2 defect model on these patches, reusing pretrained weights where possible.
 * Package inference scripts/notebooks to run the two-stage pipeline on the 650 test images and to visualise detections for qualitative review.
 
-Despite the limited time, I aimed to produce professional-quality code supported by a consistent tooling setup, orchestrated via the `just` file. The implementation is organised as follows:
+Despite the limited time, I aimed to produce professional-quality code supported by a consistent tooling setup, orchestrated via a *justfile*. The implementation is organised as follows:
 
 * Environment and dependencies are managed with `uv` to keep the Python toolchain and lockfile reproducible.
 * Code style and static quality are enforced with `ruff` and `pyrefly`.
 * Automated tests and coverage are handled with `pytest`.
 * Security is checked with `osv-scanner`, aggregated in `just cqa` and `just ci` targets for local and CI-friendly runs.
 * A single `just ci` command runs formatting, linting, type checking, tests, and security scanning, ensuring that every change can be validated quickly before reuse or extension.
+
 
 ## Limitations and possible extensions
 

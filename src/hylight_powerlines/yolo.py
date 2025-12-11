@@ -2,9 +2,10 @@ import logging
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 from ultralytics import YOLO
+from ultralytics.engine.results import Results
 
 LOG = logging.getLogger(__name__)
 
@@ -181,30 +182,16 @@ class YoloPredictor:
         LOG.info("Loading YOLO model for inference: %s", self.weights)
         self._model = YOLO(str(self.weights))  # type: ignore[no-untyped-call]
 
+
+
     def predict_on_folder(
         self,
         images_dir: Path | str,
         save: bool = True,
         save_txt: bool = False,
         save_conf: bool = False,
-    ) -> Any:
-        """Run inference on all images in a folder.
-
-        Args:
-            images_dir:
-                Directory containing images to run inference on.
-            save:
-                If True, Ultralytics saves annotated images under its default
-                runs/predict directory.
-            save_txt:
-                If True, Ultralytics saves label text files for each image.
-            save_conf:
-                If True and ``save_txt`` is True, confidences are included
-                in label files.
-
-        Returns:
-            Ultralytics prediction results object.
-        """
+        stream: bool = True,
+    ) -> Iterable[Results]:
         images_dir = Path(images_dir).expanduser().resolve()
         if not images_dir.is_dir():
             raise NotADirectoryError(f"images_dir is not a directory: {images_dir}")
@@ -218,15 +205,13 @@ class YoloPredictor:
             "save_conf": save_conf,
             "conf": self.conf,
             "device": self.device,
+            "stream": stream,
         }
         if self.img_size is not None:
             predict_args["imgsz"] = self.img_size
 
-        results = self._model.predict(  # type: ignore[no-untyped-call]
-            **predict_args
-        )
-        LOG.info("Prediction on folder completed.")
-        return results
+        # returns a generator if stream=True, list if stream=False
+        return self._model.predict(**predict_args)  # type: ignore[no-untyped-call]
 
     def predict_on_image(
         self,
