@@ -1,0 +1,120 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 928.5408,
+        "y1": 2436.8256,
+        "x2": 1090.1088,
+        "y2": 5361.5232
+      },
+      "confidence": 0.92,
+      "prompt_variants": [
+        "electric distribution pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Wooden utility pole at left side of image."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5058.0288,
+        "y1": 2414.016,
+        "x2": 5513.270399999999,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "electric distribution pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Main leaning wooden pole near center-right (shaft)."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5289.9264,
+        "y1": 3643.8335999999995,
+        "x2": 5499.0144,
+        "y2": 5802.5088
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "electric distribution pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Secondary wooden pole adjacent to main pole (lower center-right)."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5439.1392000000005,
+        "y1": 2005.344,
+        "x2": 5559.839999999999,
+        "y2": 2204.928
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Top insulator on pole-top assembly (center-right)."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5169.225600000001,
+        "y1": 2135.232,
+        "x2": 5336.496,
+        "y2": 2320.8768
+      },
+      "confidence": 0.89,
+      "prompt_variants": [
+        "distribution insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Left-side insulator on pole-top assembly (center-right)."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5568.393599999999,
+        "y1": 2414.016,
+        "x2": 5763.225600000001,
+        "y2": 2640.8448
+      },
+      "confidence": 0.89,
+      "prompt_variants": [
+        "distribution insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Lower-right insulator on pole-top assembly (center-right)."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00006.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "damper",
+      "x1": 7747.096374511719,
+      "y1": 2775.302749633789,
+      "x2": 7960.5347900390625,
+      "y2": 2939.9147033691406,
+      "score": 0.2675587832927704,
+      "source": "gdino",
+      "prompt": "Stockbridge damper . aeolian vibration damper . conductor damper . line vibration damper . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "tower",
+      "x1": 5106.069000244141,
+      "y1": 5051.902282714844,
+      "x2": 5270.961364746094,
+      "y2": 6328.93798828125,
+      "score": 0.23719479143619537,
+      "source": "gdino",
+      "prompt": "overhead cable pole . secondary distribution pole . service pole . utility pole . wooden line pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 5350.066741943359,
+      "y1": 3656.588638305664,
+      "x2": 5477.7484130859375,
+      "y2": 3812.368927001953,
+      "score": 0.2295856475830078,
+      "source": "gdino",
+      "prompt": "glass/porcelain insulator . line insulator . pole-top insulator . post insulator . power line insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 516.197509765625,
+      "y1": 3507.852294921875,
+      "x2": 832.5291748046875,
+      "y2": 6334.0,
+      "score": 0.21422380208969116,
+      "source": "gdino",
+      "prompt": "distribution pole . electric line support pole . power line pole . power pole . utility pole . wooden power pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 4882.163299560547,
+      "y1": 3267.459442138672,
+      "x2": 5020.669586181641,
+      "y2": 3426.780029296875,
+      "score": 0.20907451212406158,
+      "source": "gdino",
+      "prompt": "distribution line insulator . glass insulator . overhead line insulator . pin-type insulator . pole-top insulator . power line insulator"
+    },
+    {
+      "label": "damper",
+      "x1": 170.9014492034912,
+      "y1": 5242.432388305664,
+      "x2": 687.5172119140625,
+      "y2": 5562.707427978516,
+      "score": 0.20874370634555817,
+      "source": "gdino",
+      "prompt": "aeolian damper . conductor vibration damper . line damper . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "tower",
+      "x1": 4743.2813720703125,
+      "y1": 3099.374267578125,
+      "x2": 5510.247314453125,
+      "y2": 6316.2236328125,
+      "score": 0.20580008625984192,
+      "source": "gdino",
+      "prompt": "distribution pole . electric pole with crossarm . overhead line support . power line pole . power pole structure . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 5148.674346923828,
+      "y1": 3157.780227661133,
+      "x2": 5272.022918701172,
+      "y2": 3276.0532836914062,
+      "score": 0.2008851319551468,
+      "source": "gdino",
+      "prompt": "glass insulator . line post insulator . pin insulator . pole-mounted insulator . power line insulator"
+    }
+  ]
+}

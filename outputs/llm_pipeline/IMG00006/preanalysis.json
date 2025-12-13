@@ -1,0 +1,154 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 510.3648,
+        "y1": 3527.8848,
+        "x2": 788.832,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "electric line support pole",
+        "power line pole",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Wooden pole at left side near water; top-mounted equipment present."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4362.336,
+        "y1": 3017.2032,
+        "x2": 5499.0144,
+        "y2": 6335.0
+      },
+      "confidence": 0.93,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole with crossarm",
+        "overhead line support",
+        "power line pole",
+        "power pole structure",
+        "utility pole"
+      ],
+      "notes": "Main wooden pole with metal bracket/crossarm assembly."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5030.4672,
+        "y1": 5036.486400000001,
+        "x2": 5220.5472,
+        "y2": 6335.0
+      },
+      "confidence": 0.75,
+      "prompt_variants": [
+        "overhead cable pole",
+        "secondary distribution pole",
+        "service pole",
+        "utility pole",
+        "wooden line pole"
+      ],
+      "notes": "Shorter wooden pole with mounted hardware/equipment near road."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4803.321599999999,
+        "y1": 3249.1008,
+        "x2": 5011.4592,
+        "y2": 3411.9359999999997
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "distribution line insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Insulator on left side of metal bracket near top of main pole."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5044.7232,
+        "y1": 3109.7088,
+        "x2": 5267.116800000001,
+        "y2": 3272.544
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "glass insulator",
+        "line post insulator",
+        "pin insulator",
+        "pole-mounted insulator",
+        "power line insulator"
+      ],
+      "notes": "Top insulator on main pole bracket."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5211.0432,
+        "y1": 3620.3904,
+        "x2": 5452.4448,
+        "y2": 3806.0352000000003
+      },
+      "confidence": 0.84,
+      "prompt_variants": [
+        "glass/porcelain insulator",
+        "line insulator",
+        "pole-top insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Lower-right insulator on main pole bracket."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 7749.5616,
+        "y1": 2785.3056,
+        "x2": 7981.4592,
+        "y2": 2947.5072
+      },
+      "confidence": 0.6,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "aeolian vibration damper",
+        "conductor damper",
+        "line vibration damper",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Spiral/loop device attached to upper conductor on right side; could be vibration damper/marker."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 394.416,
+        "y1": 5244.9408,
+        "x2": 695.6928,
+        "y2": 5430.585599999999
+      },
+      "confidence": 0.4,
+      "prompt_variants": [
+        "aeolian damper",
+        "conductor vibration damper",
+        "line damper",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Pink/white spiral attachment on conductor near left pole; may be a marker or damper."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 2807.578125,
+        "y1": 1949.5384615384617,
+        "x2": 3596.484375,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole"
+      ],
+      "notes": "primary wooden utility pole with top bracket"
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3364.453125,
+        "y1": 3852.65934065934,
+        "x2": 3805.3125,
+        "y2": 6335.0
+      },
+      "confidence": 0.85,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole"
+      ],
+      "notes": "secondary wooden pole with mounted hardware"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 2830.78125,
+        "y1": 2237.3274725274728,
+        "x2": 3025.6875,
+        "y2": 2436.923076923077
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "cap-and-pin insulator",
+        "distribution line insulator",
+        "glass disc insulator",
+        "overhead conductor insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "left top insulator on main pole"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3016.40625,
+        "y1": 2112.0,
+        "x2": 3225.234375,
+        "y2": 2297.6703296703295
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "cap-and-pin insulator",
+        "distribution line insulator",
+        "glass disc insulator",
+        "overhead conductor insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "upper insulator on main pole head"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3271.640625,
+        "y1": 2701.5032967032967,
+        "x2": 3480.46875,
+        "y2": 2896.4571428571426
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "cap-and-pin insulator",
+        "distribution line insulator",
+        "glass disc insulator",
+        "overhead conductor insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "right-side insulator on main pole bracket"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3341.25,
+        "y1": 4242.567032967033,
+        "x2": 3452.625,
+        "y2": 4400.386813186813
+      },
+      "confidence": 0.6,
+      "prompt_variants": [
+        "distribution insulator",
+        "equipment insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "polymer insulator",
+        "power line insulator"
+      ],
+      "notes": "left device/insulator on secondary pole"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3564.0,
+        "y1": 4196.14945054945,
+        "x2": 3693.9375,
+        "y2": 4367.894505494505
+      },
+      "confidence": 0.6,
+      "prompt_variants": [
+        "distribution insulator",
+        "equipment insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "polymer insulator",
+        "power line insulator"
+      ],
+      "notes": "right device/insulator on secondary pole"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3225.234375,
+        "y1": 4121.881318681319,
+        "x2": 3304.125,
+        "y2": 4200.791208791208
+      },
+      "confidence": 0.4,
+      "prompt_variants": [
+        "distribution line insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "shackle insulator",
+        "spool insulator"
+      ],
+      "notes": "small insulator-like component near secondary pole crossarm"
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 6311.25,
+        "y1": 1554.989010989011,
+        "x2": 6659.296875,
+        "y2": 1763.868131868132
+      },
+      "confidence": 0.55,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "conductor damper",
+        "overhead line damper",
+        "power line vibration control device",
+        "spiral line damper",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "spiral device mounted on conductor (damper/bird diverter-like)"
+    }
+  ]
+}

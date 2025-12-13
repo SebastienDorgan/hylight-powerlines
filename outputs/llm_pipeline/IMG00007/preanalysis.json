@@ -1,0 +1,123 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 821.390625,
+        "y1": 1183.6483516483518,
+        "x2": 1030.21875,
+        "y2": 4121.881318681319
+      },
+      "confidence": 0.84,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden utility pole"
+      ],
+      "notes": "Left wooden pole near water; includes pole-top mounted hardware."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4895.859375,
+        "y1": 881.934065934066,
+        "x2": 5754.375,
+        "y2": 5268.395604395605
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden utility pole"
+      ],
+      "notes": "Main tall wooden pole with pole-top insulator assembly."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5281.03125,
+        "y1": 2664.369230769231,
+        "x2": 5698.6875,
+        "y2": 4623.191208791209
+      },
+      "confidence": 0.77,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole",
+        "wooden utility pole"
+      ],
+      "notes": "Secondary wooden pole (smaller) to the right of the main pole."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5113.96875,
+        "y1": 1030.4703296703296,
+        "x2": 5243.90625,
+        "y2": 1216.1406593406593
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "conductor insulator",
+        "glass insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Left-side pole-top glass insulator on main pole hardware."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5383.125,
+        "y1": 914.4263736263736,
+        "x2": 5540.90625,
+        "y2": 1058.320879120879
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "conductor insulator",
+        "glass insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Top glass insulator at the highest point of the main pole assembly."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5550.1875,
+        "y1": 1462.1538461538462,
+        "x2": 5689.40625,
+        "y2": 1615.331868131868
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "conductor insulator",
+        "glass insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Lower-right glass insulator on the main pole assembly."
+    }
+  ]
+}

@@ -1,7 +1,22 @@
+import importlib
 import os
 import sys
+from pathlib import Path
+from typing import Any, cast
 
-from pydrive2.fs import GDriveFileSystem
+try:
+    GDriveFileSystem = cast(
+        Any,
+        importlib.import_module("pydrive2.fs").GDriveFileSystem,
+    )
+except ImportError as e:  # pragma: no cover
+    raise SystemExit(
+        "Missing optional dependency 'pydrive2'.\n"
+        "This repo no longer pins pydrive2 because its current releases constrain "
+        "'cryptography<44' (flagged by OSV).\n"
+        "If you still want to use this script, install pydrive2 in a separate environment "
+        "or add it locally, then rerun."
+    ) from e
 
 HYLIGHT_FOLDER_ID = os.getenv("HYLIGHT_FOLDER_ID")
 GOOGLE_SERVICE_ACCOUNT_JSON = os.getenv("GOOGLE_SERVICE_ACCOUNT_JSON")
@@ -24,7 +39,7 @@ def normalize_name(full_name: str) -> str:
     return full_name[-12:]
 
 
-os.makedirs(NEW_ROOT, exist_ok=True)
+Path(NEW_ROOT).mkdir(parents=True, exist_ok=True)
 
 # Sanity check
 print("fs.root =", fs.root)

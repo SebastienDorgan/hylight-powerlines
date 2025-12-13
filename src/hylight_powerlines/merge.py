@@ -1,3 +1,5 @@
+"""Dataset merging utilities for Roboflow-exported YOLO datasets."""
+
 import logging
 import shutil
 from dataclasses import dataclass
@@ -8,6 +10,7 @@ import yaml
 from shapely.geometry import Polygon
 
 LOG = logging.getLogger(__name__)
+
 
 @dataclass
 class LabelMapping:
@@ -231,7 +234,7 @@ def merge_one_dataset(
                     det_coords = coords_to_detection_bbox(coords)
                     # Normalised coords are kept as float; format with limited precision
                     det_coords_str = [f"{v:.6f}" for v in det_coords]
-                    new_line = " ".join([str(target_idx)] + det_coords_str)
+                    new_line = " ".join([str(target_idx), *det_coords_str])
                     new_lines.append(new_line)
 
             # We keep the image even if new_lines is empty (background-only image).

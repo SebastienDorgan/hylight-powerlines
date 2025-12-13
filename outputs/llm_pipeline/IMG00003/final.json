@@ -1,0 +1,54 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00003.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "tower",
+      "x1": 4603.5794677734375,
+      "y1": 2127.64404296875,
+      "x2": 5944.960205078125,
+      "y2": 6294.962890625,
+      "score": 0.2640951871871948,
+      "source": "gdino",
+      "prompt": "distribution pole . electric line pole . line support structure . overhead line support pole . power line tower (pole) . power pole . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 4647.241455078125,
+      "y1": 2376.7376098632812,
+      "x2": 4779.265319824219,
+      "y2": 2646.8677368164062,
+      "score": 0.2178947478532791,
+      "source": "gdino",
+      "prompt": "composite insulator . distribution line insulator . overhead line insulator . polymer insulator . porcelain insulator . power line insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5225.718521118164,
+      "y1": 2448.6124267578125,
+      "x2": 5386.7509765625,
+      "y2": 2644.0409240722656,
+      "score": 0.2078050971031189,
+      "source": "gdino",
+      "prompt": "composite insulator . distribution line insulator . overhead line insulator . polymer insulator . porcelain insulator . power line insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5801.125274658203,
+      "y1": 2481.8445434570312,
+      "x2": 5990.354583740234,
+      "y2": 2704.8619079589844,
+      "score": 0.20469257235527039,
+      "source": "gdino",
+      "prompt": "composite insulator . distribution line insulator . overhead line insulator . polymer insulator . porcelain insulator . power line insulator . suspension insulator"
+    }
+  ]
+}

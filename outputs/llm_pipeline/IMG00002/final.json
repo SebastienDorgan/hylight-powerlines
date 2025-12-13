@@ -1,0 +1,74 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00002.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "tower",
+      "x1": 3944.1297607421875,
+      "y1": 3213.37353515625,
+      "x2": 4865.2742919921875,
+      "y2": 6313.2236328125,
+      "score": 0.3074735701084137,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line pole . power line support structure . power pole . utility pole . wooden power pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 3949.459014892578,
+      "y1": 3435.545913696289,
+      "x2": 4097.230804443359,
+      "y2": 3599.8088989257812,
+      "score": 0.25227078795433044,
+      "source": "gdino",
+      "prompt": "ceramic insulator . distribution line insulator . pin insulator . pole insulator . power line insulator . side-mounted insulator"
+    },
+    {
+      "label": "damper",
+      "x1": 5650.323867797852,
+      "y1": 1693.326156616211,
+      "x2": 5841.697265625,
+      "y2": 1907.0580444335938,
+      "score": 0.2387271374464035,
+      "source": "gdino",
+      "prompt": "bird diverter . conductor damper . helical damper . line vibration suppressor . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "insulator",
+      "x1": 4681.302307128906,
+      "y1": 3720.7882690429688,
+      "x2": 4869.251708984375,
+      "y2": 3900.647216796875,
+      "score": 0.22289788722991943,
+      "source": "gdino",
+      "prompt": "ceramic insulator . distribution insulator . overhead line insulator . pin insulator . power line insulator . side-mounted insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 3458.571533203125,
+      "y1": 5657.658599853516,
+      "x2": 3717.9340209960938,
+      "y2": 6328.6878662109375,
+      "score": 0.20841769874095917,
+      "source": "gdino",
+      "prompt": "distribution pole . line pole . overhead line pole . power pole . utility pole . wooden pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 4339.785675048828,
+      "y1": 3242.3933868408203,
+      "x2": 4504.996368408203,
+      "y2": 3381.8223266601562,
+      "score": 0.20480531454086304,
+      "source": "gdino",
+      "prompt": "ceramic insulator . distribution insulator . line insulator . pin insulator . pole-top insulator . power line insulator"
+    }
+  ]
+}

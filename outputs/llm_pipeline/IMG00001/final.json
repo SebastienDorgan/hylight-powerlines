@@ -1,0 +1,64 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00001.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "tower",
+      "x1": 2923.2093658447266,
+      "y1": 1831.9750061035156,
+      "x2": 3008.771987915039,
+      "y2": 2082.8953247070312,
+      "score": 0.27422037720680237,
+      "source": "gdino",
+      "prompt": "distribution pole . electricity pylon . overhead line support pole . power line pole . power line tower . transmission tower . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 4775.668914794922,
+      "y1": 1392.1669616699219,
+      "x2": 4843.469253540039,
+      "y2": 1597.6255798339844,
+      "score": 0.23839302361011505,
+      "source": "gdino",
+      "prompt": "distribution pole . electricity pylon . overhead line support pole . power line pole . power line tower . transmission tower . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 3942.3704948425293,
+      "y1": 1556.202133178711,
+      "x2": 4033.3986053466797,
+      "y2": 1824.424072265625,
+      "score": 0.2275552600622177,
+      "source": "gdino",
+      "prompt": "distribution pole . electricity pylon . overhead line support pole . power line pole . power line tower . transmission tower . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 1733.751075744629,
+      "y1": 2095.721160888672,
+      "x2": 1832.6515350341797,
+      "y2": 2381.6528930664062,
+      "score": 0.21714141964912415,
+      "source": "gdino",
+      "prompt": "distribution pole . electricity pylon . overhead line support pole . power line pole . power line tower . transmission tower . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 5493.0,
+      "y1": 1108.2468692660332,
+      "x2": 5620.0,
+      "y2": 1560.0,
+      "score": 0.20757469534873962,
+      "source": "gdino",
+      "prompt": "distribution pole . electricity pylon . overhead line support pole . power line pole . power line tower . transmission tower . utility pole"
+    }
+  ]
+}

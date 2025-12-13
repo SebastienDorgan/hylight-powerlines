@@ -1,8 +1,10 @@
+"""Thin wrappers around Ultralytics YOLO training and inference APIs."""
+
 import logging
-from collections.abc import Mapping
+from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 from ultralytics import YOLO
 from ultralytics.engine.results import Results
@@ -48,6 +50,7 @@ class YoloFineTuner:
     run_name: str = "yolo8-finetune"
     seed: int = 0
     overrides: Mapping[str, Any] = field(default_factory=dict)
+    model_factory: Callable[[str], object] = YOLO
 
     def __post_init__(self) -> None:
         self.dataset_root = Path(self.dataset_root).expanduser().resolve()
@@ -81,7 +84,7 @@ class YoloFineTuner:
         LOG.info("  run_name: %s", self.run_name)
 
         # Load base model
-        model = YOLO(self.model_name)  # type: ignore[no-untyped-call]
+        model = self.model_factory(self.model_name)  # type: ignore[no-untyped-call]
 
         # Map "auto" to 0 (Ultralytics convention for automatic batch size)
         if isinstance(self.batch, str):
@@ -123,7 +126,7 @@ class YoloFineTuner:
         LOG.info("Best model checkpoint: %s", best_ckpt)
         return best_ckpt
 
-    def validate(self, weights: Path | None = None) -> Any:
+    def validate(self, weights: Path | None = None) -> object:
         """Run YOLO validation on the dataset.
 
         Args:
@@ -135,13 +138,13 @@ class YoloFineTuner:
         """
         if weights is not None:
             LOG.info("Running validation with weights: %s", weights)
-            model = YOLO(str(weights))  # type: ignore[no-untyped-call]
+            model = self.model_factory(str(weights))  # type: ignore[no-untyped-call]
         else:
             LOG.info(
                 "Running validation with original model_name checkpoint: %s",
                 self.model_name,
             )
-            model = YOLO(self.model_name)  # type: ignore[no-untyped-call]
+            model = self.model_factory(self.model_name)  # type: ignore[no-untyped-call]
 
         results = model.val(data=str(self.data_yaml))  # type: ignore[no-untyped-call]
         LOG.info("Validation completed. Results: %s", results)
@@ -173,6 +176,7 @@ class YoloPredictor:
     device: str | None = None
     img_size: int | None = None
     conf: float = 0.25
+    model_factory: Callable[[str], object] = YOLO
 
     def __post_init__(self) -> None:
         self.weights = Path(self.weights).expanduser().resolve()
@@ -180,9 +184,7 @@ class YoloPredictor:
             raise FileNotFoundError(f"weights file not found: {self.weights}")
 
         LOG.info("Loading YOLO model for inference: %s", self.weights)
-        self._model = YOLO(str(self.weights))  # type: ignore[no-untyped-call]
-
-
+        self._model = self.model_factory(str(self.weights))  # type: ignore[no-untyped-call]
 
     def predict_on_folder(
         self,
@@ -192,6 +194,18 @@ class YoloPredictor:
         save_conf: bool = False,
         stream: bool = True,
     ) -> Iterable[Results]:
+        """Run inference on all images in a folder.
+
+        Args:
+            images_dir: Folder containing images.
+            save: If True, save annotated images under Ultralytics' default runs directory.
+            save_txt: If True, save YOLO-format label `.txt` files.
+            save_conf: If True and `save_txt` is True, include confidences in label files.
+            stream: If True, return a generator instead of a fully materialized list.
+
+        Returns:
+            An iterable of Ultralytics `Results`.
+        """
         images_dir = Path(images_dir).expanduser().resolve()
         if not images_dir.is_dir():
             raise NotADirectoryError(f"images_dir is not a directory: {images_dir}")
@@ -219,7 +233,7 @@ class YoloPredictor:
         save: bool = False,
         save_txt: bool = False,
         save_conf: bool = False,
-    ) -> Any:
+    ) -> list[Results]:
         """Run inference on a single image.
 
         Args:

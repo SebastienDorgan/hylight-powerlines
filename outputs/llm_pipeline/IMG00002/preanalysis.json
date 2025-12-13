@@ -1,0 +1,120 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3898.5408,
+        "y1": 3156.5951999999997,
+        "x2": 4872.7008000000005,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line pole",
+        "power line support structure",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Main wooden distribution pole with metal crossarm/bracket."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3410.9856,
+        "y1": 5685.9264,
+        "x2": 3736.0224,
+        "y2": 6335.0
+      },
+      "confidence": 0.75,
+      "prompt_variants": [
+        "distribution pole",
+        "line pole",
+        "overhead line pole",
+        "power pole",
+        "utility pole",
+        "wooden pole"
+      ],
+      "notes": "Secondary pole top and upper section visible near bottom-left."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4306.2624,
+        "y1": 3235.1616000000004,
+        "x2": 4538.16,
+        "y2": 3444.2495999999996
+      },
+      "confidence": 0.82,
+      "prompt_variants": [
+        "ceramic insulator",
+        "distribution insulator",
+        "line insulator",
+        "pin insulator",
+        "pole-top insulator",
+        "power line insulator"
+      ],
+      "notes": "Top-mounted insulator on pole bracket (upper conductor attachment)."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3926.1024,
+        "y1": 3416.3712,
+        "x2": 4130.4384,
+        "y2": 3648.2688
+      },
+      "confidence": 0.8,
+      "prompt_variants": [
+        "ceramic insulator",
+        "distribution line insulator",
+        "pin insulator",
+        "pole insulator",
+        "power line insulator",
+        "side-mounted insulator"
+      ],
+      "notes": "Left-side insulator on metal arm."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4668.3648,
+        "y1": 3722.4,
+        "x2": 4858.4448,
+        "y2": 3917.5487999999996
+      },
+      "confidence": 0.78,
+      "prompt_variants": [
+        "ceramic insulator",
+        "distribution insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "power line insulator",
+        "side-mounted insulator"
+      ],
+      "notes": "Right-side insulator on metal arm."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 5652.0288,
+        "y1": 1694.2464000000002,
+        "x2": 5833.5552,
+        "y2": 1917.2736
+      },
+      "confidence": 0.55,
+      "prompt_variants": [
+        "bird diverter",
+        "conductor damper",
+        "helical damper",
+        "line vibration suppressor",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Loop/spiral device on conductor (could be helical damper or bird diverter)."
+    }
+  ]
+}

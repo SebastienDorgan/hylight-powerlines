@@ -1,8 +1,11 @@
+"""Roboflow export downloader (ZIP-only), with retry logic for stale export links."""
+
 from __future__ import annotations
 
 import json
 import logging
 import os
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Final, Literal
@@ -45,6 +48,7 @@ class RoboflowDownloader:
     export_format: ExportFormat = "yolov8"
     api_base: str = DEFAULT_API_BASE
     api_key_env: str = DEFAULT_API_KEY_ENV
+    client_factory: Callable[..., httpx.Client] = httpx.Client
 
     def __post_init__(self) -> None:
         """Validate configuration after initialization.
@@ -98,7 +102,7 @@ class RoboflowDownloader:
             api_key = self.get_api_key()
 
         url = f"{self.api_base}/{self.workspace}/{self.project}?api_key={api_key}"
-        with httpx.Client(timeout=60.0) as client:
+        with self.client_factory(timeout=60.0) as client:
             resp = client.get(url)
             resp.raise_for_status()
             return resp.json()
@@ -169,7 +173,7 @@ class RoboflowDownloader:
             httpx.HTTPError: If the HTTP request fails.
         """
         url = self.build_export_url(api_key=api_key)
-        with httpx.Client(timeout=60.0) as client:
+        with self.client_factory(timeout=60.0) as client:
             resp = client.get(url)
             resp.raise_for_status()
             return resp.json()
@@ -208,7 +212,7 @@ class RoboflowDownloader:
 
         # follow_redirects=True is important for Roboflow's links.
         with (
-            httpx.Client(timeout=None, follow_redirects=True) as client,
+            self.client_factory(timeout=None, follow_redirects=True) as client,
             client.stream("GET", zip_url) as resp,
         ):
             resp.raise_for_status()
@@ -279,8 +283,6 @@ class RoboflowDownloader:
 
             try:
                 out_zip = self.download_zip(zip_url, dest)
-                LOG.info(f"Dataset ZIP saved to: {out_zip}")
-                return out_zip
             except httpx.HTTPStatusError as exc:
                 # Retry only on 404 from the storage backend
                 if (
@@ -296,3 +298,6 @@ class RoboflowDownloader:
                     continue
                 # Any other error, or retries exhausted -> propagate
                 raise
+            else:
+                LOG.info(f"Dataset ZIP saved to: {out_zip}")
+                return out_zip

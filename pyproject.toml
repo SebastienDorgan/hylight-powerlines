@@ -3,17 +3,17 @@ name = "hylight-powerlines"
 version = "0.1.0"
 description = "Automated tool to detect and classify defects on powerlines and pylons."
 readme = "README.md"
-authors = [
-  { name = "Seb", email = "sebsatien.dorgan@gmail.com" }
-]
+authors = [{ name = "Seb", email = "sebsatien.dorgan@gmail.com" }]
 requires-python = ">=3.14"
 
 dependencies = [
   "fsspec>=2025.10.0",
   "httpx>=0.28.1",
+  "litellm>=1.80.9",
   "pillow>=12.0.0",
-  "pydrive2[fsspec]>=1.21.3",
+  "sam2>=1.1.0",
   "shapely>=2.1.2",
+  "transformers>=4.57.3",
   "ultralytics>=8.3.235",
 ]
 
@@ -27,7 +27,7 @@ dev = [
   "ruff>=0.14.6",
   "pytest>=9.0.1",
   "pytest-cov>=7.0.0",
-  "pyrefly>=0.43.1",  # current latest on PyPI at the time of writing
+  "pyrefly>=0.43.1",   # current latest on PyPI at the time of writing
   "ipykernel>=7.1.0",
 ]
 
@@ -35,9 +35,56 @@ dev = [
 line-length = 100
 src = ["src"]
 target-version = "py314"
+exclude = [
+  "notebooks/**",
+  "*.ipynb",
+]
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "B", "UP", "SIM"]
+select = [
+  "E",    # pycodestyle errors (whitespace, indentation, etc.) 
+  "F",    # Pyflakes (unused imports/variables, undefined names, etc.)
+  "I",    # import sorting (isort)
+  "B",    # flake8-bugbear (common bug patterns / footguns)
+  "UP",   # pyupgrade (modernize syntax for the target Python version)
+  "SIM",  # flake8-simplify (simplify conditionals / expressions)
+  "F401", # unused imports
+  "C90",  # mccabe (cyclomatic complexity)
+  "ANN",  # flake8-annotations (type-hint enforcement)
+  "D",    # pydocstyle (docstring conventions)
+  "S",    # flake8-bandit (basic security checks)
+  "TRY",  # tryceratops (exception handling best practices)
+  "RET",  # flake8-return (return-statement consistency)
+  "ARG",  # flake8-unused-arguments
+  "PTH",  # flake8-use-pathlib
+  "PERF", # perflint (performance traps)
+  "RUF",  # Ruff-specific rules (best practices / correctness)
+  "TID",  # flake8-tidy-imports (import hygiene)
+  "PL",   # pylint rules (broad additional checks; noisy subsets ignored below)
+]
+
+# Keep pylint enabled but ignore its noisiest families by default.
+ignore = [
+  "PLR", # refactor suggestions
+  "PLW", # warnings often too noisy for this repo
+  "PLC", # conventions (naming, etc.)
+  "TRY003", # too noisy; prefer actionable exceptions
+  "ANN401", # `Any` is sometimes necessary at external-library boundaries
+  "D105",   # don't require docstrings on magic methods (e.g., __post_init__)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 20
+
+[tool.ruff.lint.per-file-ignores]
+# Tests are allowed to be more free-form (asserts, fixtures, unused args, etc.).
+"tests/**" = ["D", "ANN", "S101", "ARG", "PLR", "PLW", "PLC"]
+# Scripts are “imperative shell”; don’t enforce library-level docs/annotations there.
+"scripts/**" = ["D", "ANN", "ARG", "PLR", "PLW", "PLC", "TRY003"]
+
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -45,7 +92,4 @@ testpaths = ["tests"]
 # Pyrefly config lives here; no separate file needed
 [tool.pyrefly]
 # Include both src and tests in type-checking
-search_path = [
-  "src",
-  "tests",
-]
+search_path = ["src", "tests"]

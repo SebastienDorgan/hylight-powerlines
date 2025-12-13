@@ -1,0 +1,142 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4872.65625,
+        "y1": 1995.956043956044,
+        "x2": 5652.28125,
+        "y2": 5964.65934065934
+      },
+      "confidence": 0.92,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line support pole",
+        "power line pole",
+        "power pole",
+        "powerline structure",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Main wooden pole with top arm/insulator assembly."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 6984.140625,
+        "y1": 2947.5164835164837,
+        "x2": 7610.625,
+        "y2": 4920.263736263736
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "distribution pole",
+        "line support pole",
+        "overhead power pole",
+        "power pole",
+        "utility pole",
+        "wooden pole (power line)"
+      ],
+      "notes": "Secondary wooden pole with crossarm."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5183.578125,
+        "y1": 2065.5824175824177,
+        "x2": 5373.84375,
+        "y2": 2265.178021978022
+      },
+      "confidence": 0.87,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass insulator",
+        "line insulator",
+        "overhead conductor insulator",
+        "pin insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Top insulator on the main pole head."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4909.78125,
+        "y1": 2232.6857142857143,
+        "x2": 5104.6875,
+        "y2": 2390.5054945054944
+      },
+      "confidence": 0.84,
+      "prompt_variants": [
+        "ceramic insulator",
+        "line insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Left-side insulator on main pole assembly."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5406.328125,
+        "y1": 2539.0417582417585,
+        "x2": 5596.59375,
+        "y2": 2720.0703296703296
+      },
+      "confidence": 0.84,
+      "prompt_variants": [
+        "ceramic insulator",
+        "line insulator",
+        "overhead conductor insulator",
+        "pin insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Right-side insulator on main pole assembly."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 7786.96875,
+        "y1": 984.0527472527473,
+        "x2": 8051.484375,
+        "y2": 1183.6483516483518
+      },
+      "confidence": 0.65,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "aeolian vibration damper",
+        "conductor damper",
+        "helical line damper",
+        "line vibration suppressor",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Spiral/helical attachment on the overhead conductor (likely vibration damper or similar)."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 0.0,
+        "y1": 4864.562637362637,
+        "x2": 185.625,
+        "y2": 5096.65054945055
+      },
+      "confidence": 0.55,
+      "prompt_variants": [
+        "aeolian vibration damper",
+        "conductor damper",
+        "helical line damper",
+        "line vibration suppressor",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Partial spiral/helical attachment on conductor at left edge of frame."
+    }
+  ]
+}
