@@ -247,6 +247,7 @@ def run_pipeline(
     # 2) Grounding DINO refine
     t1 = perf_counter()
     if gdino_factory is None:
+
         def gdino_factory(model_id: str, device: str) -> GroundingDinoHF:
             return GroundingDinoHF(model_id=model_id, device=device)
 
@@ -278,6 +279,7 @@ def run_pipeline(
         if not cfg.sam2_config or not cfg.sam2_ckpt:
             raise RuntimeError("--use_sam2 requires sam2_config and sam2_ckpt to be set")
         if sam2_factory is None:
+
             def sam2_factory(cfg_path: str, ckpt_path: str, device: str) -> Sam2Segmenter:
                 return Sam2Segmenter(cfg_path, ckpt_path, device=device)
 

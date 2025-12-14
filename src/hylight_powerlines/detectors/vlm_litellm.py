@@ -329,7 +329,7 @@ Rules:
                 "container": {"type": "auto", "memory_limit": "4g"},
             }
         ],
-        "timeout": timeout_s*1.1
+        "timeout": timeout_s * 1.1,
     }
     if timeout_s is not None:
         response_kwargs["timeout"] = timeout_s

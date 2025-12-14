@@ -52,4 +52,3 @@ def slice_with_sahi(
     for tile_arr, (ox, oy) in zip(images, starting_pixels, strict=False):
         tiles.append((Image.fromarray(tile_arr).convert("RGB"), int(ox), int(oy)))
     return tiles
-

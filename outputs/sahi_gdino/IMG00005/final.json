@@ -1,0 +1,134 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00005.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "tower",
+      "x1": 8197.593933105469,
+      "y1": 5408.7177734375,
+      "x2": 8455.667785644531,
+      "y2": 5723.073974609375,
+      "score": 0.6329195499420166,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 875.3218994140625,
+      "y1": 2468.479736328125,
+      "x2": 1158.943359375,
+      "y2": 5330.0869140625,
+      "score": 0.5435693860054016,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 4983.80224609375,
+      "y1": 1986.7144775390625,
+      "x2": 5786.45166015625,
+      "y2": 6117.26953125,
+      "score": 0.4809938669204712,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 945.9339599609375,
+      "y1": 3283.0499877929688,
+      "x2": 1021.2713623046875,
+      "y2": 4300.022888183594,
+      "score": 0.4688388407230377,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 5268.6954345703125,
+      "y1": 3719.994659423828,
+      "x2": 5553.7169189453125,
+      "y2": 5550.43359375,
+      "score": 0.452968955039978,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 5001.4254150390625,
+      "y1": 4291.680114746094,
+      "x2": 5330.8404541015625,
+      "y2": 6139.238037109375,
+      "score": 0.4455624520778656,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "tower",
+      "x1": 352.3561096191406,
+      "y1": 4112.787048339844,
+      "x2": 425.5556335449219,
+      "y2": 4777.451171875,
+      "score": 0.43703094124794006,
+      "source": "gdino_anchor_fused",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "insulator",
+      "x1": 5640.389862060547,
+      "y1": 2486.81884765625,
+      "x2": 5772.575347900391,
+      "y2": 2606.818115234375,
+      "score": 0.43108850717544556,
+      "source": "gdino_2048x2048",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "damper",
+      "x1": 7616.386962890625,
+      "y1": 6058.23828125,
+      "x2": 8720.3779296875,
+      "y2": 6330.644775390625,
+      "score": 0.42877355217933655,
+      "source": "gdino_2048x2048",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "insulator",
+      "x1": 918.442138671875,
+      "y1": 2683.8717041015625,
+      "x2": 1096.4935302734375,
+      "y2": 2838.6287841796875,
+      "score": 0.41985395550727844,
+      "source": "gdino_2048x2048",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "insulator",
+      "x1": 5468.564697265625,
+      "y1": 3959.5922241210938,
+      "x2": 5554.8427734375,
+      "y2": 4102.936584472656,
+      "score": 0.3642231523990631,
+      "source": "gdino_2048x2048",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    },
+    {
+      "label": "insulator",
+      "x1": 5161.3160400390625,
+      "y1": 2124.1969299316406,
+      "x2": 5293.0340576171875,
+      "y2": 2267.135528564453,
+      "score": 0.3567691743373871,
+      "source": "gdino_2048x2048",
+      "prompt": "tower . insulator . damper . spacer . tower_plate . overhead aerial photo . overhead power line infrastructure . utility pole . power pole . electric pylon . transmission tower . overhead power lines . conductor wires . insulator string . stockbridge damper . conductor spacer"
+    }
+  ]
+}

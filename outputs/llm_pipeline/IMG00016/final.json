@@ -1,0 +1,64 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00016.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 4035.8009033203125,
+      "y1": 0.7435946464538574,
+      "x2": 4281.807891845703,
+      "y2": 149.8829345703125,
+      "score": 0.5209839940071106,
+      "source": "gdino",
+      "prompt": "disc insulator . glass disc insulator . insulator unit . line post insulator . overhead line insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 3242.284210205078,
+      "y1": 517.2182006835938,
+      "x2": 3490.7437438964844,
+      "y2": 745.7220458984375,
+      "score": 0.29256027936935425,
+      "source": "gdino",
+      "prompt": "disc insulator . glass disc insulator . line insulator . overhead line insulator . pin-type insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4581.9732666015625,
+      "y1": 10.844968795776367,
+      "x2": 4846.0821533203125,
+      "y2": 238.50238037109375,
+      "score": 0.2563931941986084,
+      "source": "gdino",
+      "prompt": "disc insulator . glass disc insulator . line insulator . overhead line insulator . pin-type insulator . power line insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 1907.258918762207,
+      "y1": 0.0,
+      "x2": 2215.2520751953125,
+      "y2": 1857.15283203125,
+      "score": 0.24722358584403992,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line pole . power pole . support pole . utility pole . wood pole"
+    },
+    {
+      "label": "tower",
+      "x1": 2879.9986572265625,
+      "y1": 9.553730964660645,
+      "x2": 4856.40234375,
+      "y2": 3750.991455078125,
+      "score": 0.24463053047657013,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line support structure . power line pole . power pole . powerline support . utility pole . wooden utility pole"
+    }
+  ]
+}
