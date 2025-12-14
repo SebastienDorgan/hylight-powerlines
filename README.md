@@ -55,9 +55,9 @@ Automated pipeline to detect power‑line components and defects using Ultralyti
     - Provide the corresponding API key, e.g. `OPENAI_API_KEY=...`
   - (Optional) Google Drive sample images: `HYLIGHT_FOLDER_ID=<drive_folder_id>`, `GOOGLE_SERVICE_ACCOUNT_JSON=<path_to_service_account_json>`
   - (Optional) SAM2 refinement:
-    - `USE_SAM2=1`
     - `SAM2_CONFIG=<path/to/sam2_config.yaml>`
     - `SAM2_CKPT=<path/to/sam2_checkpoint.pt>`
+    - `USE_SAM2=0|1` (optional override; when unset, the batch script enables SAM2 automatically when config+ckpt are set)
 - `.env` is not auto‑loaded by the scripts. Quick ways to load it in POSIX shells:
   - `set -a; source .env; set +a` (exports all KEY=VAL pairs)
   - or export individual variables explicitly.
@@ -142,7 +142,7 @@ This is useful for quick inspection / auto-labeling when you don’t have a trai
     - `VLM_MODEL=openai/gpt-5.2`, `VLM_MAX_TOKENS=12000`
     - `GDINO_MODEL=IDEA-Research/grounding-dino-tiny`, `GDINO_BOX_THR=0.20`, `GDINO_TEXT_THR=0.20`
     - `ROI_SCALE=2.5`, `NMS_IOU=0.5`
-    - `USE_SAM2=0|1`, `SAM2_DEVICE=auto`, `SAM2_CONFIG=...`, `SAM2_CKPT=...`
+    - `USE_SAM2=0|1` (unset => auto), `SAM2_DEVICE=auto`, `SAM2_CONFIG=...`, `SAM2_CKPT=...`
 
 ## Development
 - Format: `just format`

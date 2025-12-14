@@ -1,0 +1,158 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4417.4592,
+        "y1": 719.7696000000001,
+        "x2": 4919.270399999999,
+        "y2": 5068.8
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "line support pole",
+        "power line pole",
+        "power pole",
+        "pylon",
+        "utility pole"
+      ],
+      "notes": "Central concrete/wood pole supporting multiple wires"
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 7972.9056,
+        "y1": 2367.1295999999998,
+        "x2": 8622.0288,
+        "y2": 4558.1184
+      },
+      "confidence": 0.85,
+      "prompt_variants": [
+        "distribution pole",
+        "line support pole",
+        "power line pole",
+        "power pole",
+        "pylon",
+        "utility pole"
+      ],
+      "notes": "Right-side pole with metal crossarm/bracket"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4426.9632,
+        "y1": 821.7792000000001,
+        "x2": 4724.4384,
+        "y2": 1141.7472
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "strain insulator",
+        "suspension insulator"
+      ],
+      "notes": "Upper-left disc-style insulator on central pole"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4584.7296,
+        "y1": 733.7088,
+        "x2": 4886.9568,
+        "y2": 1044.1728
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "strain insulator",
+        "suspension insulator"
+      ],
+      "notes": "Upper-right disc-style insulator on central pole"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4687.3728,
+        "y1": 1438.9056,
+        "x2": 4965.839999999999,
+        "y2": 1754.4383999999998
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "strain insulator",
+        "suspension insulator"
+      ],
+      "notes": "Lower disc-style insulator on central pole arm"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 8278.9344,
+        "y1": 2414.016,
+        "x2": 8348.3136,
+        "y2": 2464.704
+      },
+      "confidence": 0.55,
+      "prompt_variants": [
+        "line post insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "polymer insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "Small dark insulator/cap on top of right pole bracket"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 8232.3648,
+        "y1": 2640.8448,
+        "x2": 8278.9344,
+        "y2": 2687.7312
+      },
+      "confidence": 0.5,
+      "prompt_variants": [
+        "line insulator",
+        "overhead line insulator",
+        "post insulator",
+        "power line insulator",
+        "strain insulator",
+        "wire insulator"
+      ],
+      "notes": "Small dark component on wire near right pole (insulator/clamp-like)"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 8427.1968,
+        "y1": 2604.096,
+        "x2": 8488.0224,
+        "y2": 2650.3488
+      },
+      "confidence": 0.5,
+      "prompt_variants": [
+        "line insulator",
+        "overhead line insulator",
+        "post insulator",
+        "power line insulator",
+        "strain insulator",
+        "wire insulator"
+      ],
+      "notes": "Small dark component on wire near right pole (insulator/clamp-like)"
+    }
+  ]
+}

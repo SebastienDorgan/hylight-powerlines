@@ -1,0 +1,120 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3526.9343999999996,
+        "y1": 3411.9359999999997,
+        "x2": 4732.992,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "electric pole structure",
+        "overhead line pole",
+        "power line support pole",
+        "power pole",
+        "utility pole"
+      ],
+      "notes": "Primary wooden pole with metal side-arm assembly; base extends out of frame at bottom."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4315.7664,
+        "y1": 5361.5232,
+        "x2": 5081.788799999999,
+        "y2": 6335.0
+      },
+      "confidence": 0.85,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line support",
+        "power pole",
+        "secondary line pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Smaller wooden pole with top hardware/crossarm; bottom truncated by image edge."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3736.0224,
+        "y1": 3494.9375999999997,
+        "x2": 4019.2416,
+        "y2": 3829.4784000000004
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "HV insulator disc",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "suspension insulator",
+        "utility pole insulator"
+      ],
+      "notes": "Glass disc insulator at end of left upper arm."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4051.5552000000002,
+        "y1": 3615.9552,
+        "x2": 4296.7584,
+        "y2": 3833.9136
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "disc insulator",
+        "glass insulator",
+        "line post insulator",
+        "overhead conductor insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "Glass disc insulator near top center, attached to conductor."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4399.4016,
+        "y1": 4456.1088,
+        "x2": 4613.2416,
+        "y2": 4679.136
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "distribution line insulator",
+        "glass disc insulator",
+        "insulator assembly",
+        "power line insulator",
+        "suspension insulator",
+        "utility insulator"
+      ],
+      "notes": "Lower glass disc insulator on right side-arm."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 8121.168000000001,
+        "y1": 626.6304,
+        "x2": 8794.0512,
+        "y2": 1113.8688
+      },
+      "confidence": 0.65,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "conductor vibration damper",
+        "line damper device",
+        "overhead conductor damper",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Coiled/looped device attached to a conductor near top-right; likely vibration damper/spiral attachment."
+    }
+  ]
+}

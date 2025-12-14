@@ -1,0 +1,24 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00015.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "damper",
+      "x1": 8282.803955078125,
+      "y1": 4931.78515625,
+      "x2": 9490.588623046875,
+      "y2": 5916.537841796875,
+      "score": 0.2076607048511505,
+      "source": "gdino",
+      "prompt": "helical line damper . spiral anti-vibration device . spiral cable damper . spiral line marker (bird diverter) . spiral vibration damper . transmission line damper . vibration damper on power line"
+    }
+  ]
+}

@@ -14,7 +14,11 @@ Advanced tuning is via environment variables:
 - `GDINO_MODEL` (default: "IDEA-Research/grounding-dino-tiny")
 - `GDINO_BOX_THR`, `GDINO_TEXT_THR` (defaults: 0.20)
 - `ROI_SCALE` (default: 2.5), `NMS_IOU` (default: 0.5)
-- `USE_SAM2=1` plus `SAM2_CONFIG` and `SAM2_CKPT` to enable SAM2 refinement
+- SAM2 refinement:
+  - If `USE_SAM2` is unset, SAM2 is enabled automatically when both `SAM2_CONFIG`
+    and `SAM2_CKPT` are set.
+  - Set `USE_SAM2=0` to force-disable even if config/ckpt are set.
+  - Set `USE_SAM2=1` to force-enable (requires `SAM2_CONFIG` and `SAM2_CKPT`).
 - `SAM2_DEVICE` (default: "auto")
 """
 
@@ -56,6 +60,23 @@ def _yaml_dump(data: object) -> str:
     return dumped
 
 
+def _env_bool(name: str) -> bool | None:
+    """Parse an optional bool env var.
+
+    Returns:
+        True/False if present, else None.
+    """
+    raw = os.environ.get(name)
+    if raw is None:
+        return None
+    v = raw.strip().lower()
+    if v in {"1", "true", "yes", "y", "on"}:
+        return True
+    if v in {"0", "false", "no", "n", "off"}:
+        return False
+    raise SystemExit(f"Invalid {name}={raw!r}; expected 0/1/true/false.")
+
+
 def main(argv: list[str]) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--images_dir", type=str, default="assets/images")
@@ -90,10 +111,22 @@ def main(argv: list[str]) -> int:
     roi_scale = float(os.environ.get("ROI_SCALE", "2.5"))
     nms_iou = float(os.environ.get("NMS_IOU", "0.5"))
 
-    use_sam2 = bool(int(os.environ.get("USE_SAM2", "0")))
     sam2_config = os.environ.get("SAM2_CONFIG", "")
     sam2_ckpt = os.environ.get("SAM2_CKPT", "")
     sam2_device = os.environ.get("SAM2_DEVICE", "auto")
+    use_sam2_override = _env_bool("USE_SAM2")
+    use_sam2 = (
+        use_sam2_override if use_sam2_override is not None else bool(sam2_config and sam2_ckpt)
+    )
+    if use_sam2 and (not sam2_config or not sam2_ckpt):
+        raise SystemExit(
+            "SAM2 is enabled but SAM2_CONFIG and/or SAM2_CKPT is not set.\n"
+            "Set:\n"
+            "  export SAM2_CONFIG=/path/to/cfg.yaml\n"
+            "  export SAM2_CKPT=/path/to/model.pt\n"
+            "Or disable:\n"
+            "  export USE_SAM2=0\n"
+        )
 
     image_paths = _iter_jpgs(images_dir)
     if not image_paths:

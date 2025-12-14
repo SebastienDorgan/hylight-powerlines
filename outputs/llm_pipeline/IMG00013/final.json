@@ -1,0 +1,74 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00013.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 4401.50651550293,
+      "y1": 4454.410140991211,
+      "x2": 4606.699371337891,
+      "y2": 4675.559051513672,
+      "score": 0.40467569231987,
+      "source": "gdino",
+      "prompt": "distribution line insulator . glass disc insulator . insulator assembly . power line insulator . suspension insulator . utility insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 3755.0418548583984,
+      "y1": 3506.225067138672,
+      "x2": 3963.063934326172,
+      "y2": 3736.3409423828125,
+      "score": 0.2551730275154114,
+      "source": "gdino",
+      "prompt": "HV insulator disc . glass disc insulator . overhead line insulator . power line insulator . suspension insulator . utility pole insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4062.791046142578,
+      "y1": 3624.7549438476562,
+      "x2": 4268.339996337891,
+      "y2": 3808.3619079589844,
+      "score": 0.2448454201221466,
+      "source": "gdino",
+      "prompt": "disc insulator . glass insulator . line post insulator . overhead conductor insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "damper",
+      "x1": 7623.5499792099,
+      "y1": 666.6136779785156,
+      "x2": 8701.882934570312,
+      "y2": 1417.745361328125,
+      "score": 0.21852831542491913,
+      "source": "gdino",
+      "prompt": "Stockbridge damper . conductor vibration damper . line damper device . overhead conductor damper . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "tower",
+      "x1": 4574.788146972656,
+      "y1": 5464.58349609375,
+      "x2": 4877.6343994140625,
+      "y2": 6325.835205078125,
+      "score": 0.21355482935905457,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line support . power pole . secondary line pole . utility pole . wooden power pole"
+    },
+    {
+      "label": "tower",
+      "x1": 3747.2403564453125,
+      "y1": 3555.43212890625,
+      "x2": 4575.9283447265625,
+      "y2": 6319.0791015625,
+      "score": 0.21345847845077515,
+      "source": "gdino",
+      "prompt": "distribution pole . electric pole structure . overhead line pole . power line support pole . power pole . utility pole"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 556.875,
+        "y1": 1206.857142857143,
+        "x2": 1485.0,
+        "y2": 5709.3626373626375
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line support pole",
+        "power line pole",
+        "power pole",
+        "powerline tower",
+        "utility pole"
+      ],
+      "notes": "Main overhead line support pole on the left with bracket/crossarm."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4306.5,
+        "y1": 4920.263736263736,
+        "x2": 4710.234375,
+        "y2": 6335.0
+      },
+      "confidence": 0.85,
+      "prompt_variants": [
+        "distribution pole",
+        "line support pole",
+        "power pole",
+        "service pole",
+        "utility pole"
+      ],
+      "notes": "Smaller pole visible near bottom-center of image."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 696.09375,
+        "y1": 1346.10989010989,
+        "x2": 974.53125,
+        "y2": 1633.8989010989012
+      },
+      "confidence": 0.82,
+      "prompt_variants": [
+        "glass insulator",
+        "line post insulator",
+        "overhead line insulator",
+        "pin insulator",
+        "power line insulator"
+      ],
+      "notes": "Top-left insulator on the left pole assembly."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 1123.03125,
+        "y1": 1415.7362637362637,
+        "x2": 1392.1875,
+        "y2": 1680.3164835164835
+      },
+      "confidence": 0.8,
+      "prompt_variants": [
+        "glass insulator",
+        "line post insulator",
+        "overhead conductor insulator",
+        "pin-type insulator",
+        "power line insulator"
+      ],
+      "notes": "Top-right insulator on the left pole assembly."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 394.453125,
+        "y1": 2051.657142857143,
+        "x2": 696.09375,
+        "y2": 2302.312087912088
+      },
+      "confidence": 0.78,
+      "prompt_variants": [
+        "glass insulator",
+        "line insulator hardware",
+        "overhead line insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "Lower-left insulator attached to the left pole bracket."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 5847.1875,
+        "y1": 3411.6923076923076,
+        "x2": 6520.078125,
+        "y2": 3759.8241758241757
+      },
+      "confidence": 0.55,
+      "prompt_variants": [
+        "aeolian vibration damper",
+        "conductor damper",
+        "line vibration suppressor",
+        "spiral damper",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Helical/spiral device wrapped around conductor (appears to be a spiral vibration damper type)."
+    }
+  ]
+}
