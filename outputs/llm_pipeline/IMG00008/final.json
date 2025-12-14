@@ -1,0 +1,104 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00008.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 3087.1634063720703,
+      "y1": 2126.887496948242,
+      "x2": 3232.2439880371094,
+      "y2": 2259.0189819335938,
+      "score": 0.5259947776794434,
+      "source": "gdino",
+      "prompt": "cap-and-pin insulator . distribution line insulator . glass disc insulator . overhead conductor insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 2875.954391479492,
+      "y1": 2226.0794525146484,
+      "x2": 3018.4490966796875,
+      "y2": 2376.8640747070312,
+      "score": 0.49279889464378357,
+      "source": "gdino",
+      "prompt": "cap-and-pin insulator . distribution line insulator . glass disc insulator . overhead conductor insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 3284.279083251953,
+      "y1": 2700.9869384765625,
+      "x2": 3448.4202270507812,
+      "y2": 2878.9535522460938,
+      "score": 0.3824463188648224,
+      "source": "gdino",
+      "prompt": "cap-and-pin insulator . distribution line insulator . glass disc insulator . overhead conductor insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 2865.8175048828125,
+      "y1": 2122.757080078125,
+      "x2": 3451.550537109375,
+      "y2": 6320.8876953125,
+      "score": 0.3039112985134125,
+      "source": "gdino",
+      "prompt": "distribution pole . electric pole . overhead line pole . power line support pole . power pole . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 3548.922996520996,
+      "y1": 4205.535675048828,
+      "x2": 3612.902359008789,
+      "y2": 4356.000518798828,
+      "score": 0.28496456146240234,
+      "source": "gdino",
+      "prompt": "distribution insulator . equipment insulator . line post insulator . overhead line insulator . polymer insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 3216.1694107055664,
+      "y1": 4182.567161560059,
+      "x2": 3265.082893371582,
+      "y2": 4220.314651489258,
+      "score": 0.26837337017059326,
+      "source": "gdino",
+      "prompt": "distribution line insulator . overhead line insulator . power line insulator . shackle insulator . spool insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 3395.2428588867188,
+      "y1": 4015.115234375,
+      "x2": 3614.380859375,
+      "y2": 5893.51318359375,
+      "score": 0.23964211344718933,
+      "source": "gdino",
+      "prompt": "distribution pole . electric pole . overhead line pole . power line support pole . power pole . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 3386.3160095214844,
+      "y1": 4247.788612365723,
+      "x2": 3458.711624145508,
+      "y2": 4375.6715087890625,
+      "score": 0.22686408460140228,
+      "source": "gdino",
+      "prompt": "distribution insulator . equipment insulator . line post insulator . overhead line insulator . polymer insulator . power line insulator"
+    },
+    {
+      "label": "damper",
+      "x1": 6336.555816650391,
+      "y1": 1576.6385040283203,
+      "x2": 6577.922790527344,
+      "y2": 1762.3677978515625,
+      "score": 0.2065126895904541,
+      "source": "gdino",
+      "prompt": "Stockbridge damper . conductor damper . overhead line damper . power line vibration control device . spiral line damper . spiral vibration damper . vibration damper"
+    }
+  ]
+}

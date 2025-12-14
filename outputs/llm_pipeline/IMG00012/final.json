@@ -1,0 +1,74 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00012.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 466.15179443359375,
+      "y1": 2099.7938690185547,
+      "x2": 672.3352966308594,
+      "y2": 2288.2654724121094,
+      "score": 0.3864790201187134,
+      "source": "gdino",
+      "prompt": "glass insulator . line insulator hardware . overhead line insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "damper",
+      "x1": 5349.036619186401,
+      "y1": 3220.5778427124023,
+      "x2": 7016.2802734375,
+      "y2": 4004.9833984375,
+      "score": 0.3385676443576813,
+      "source": "gdino",
+      "prompt": "aeolian vibration damper . conductor damper . line vibration suppressor . spiral damper . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "insulator",
+      "x1": 750.5967407226562,
+      "y1": 1422.5579528808594,
+      "x2": 933.6925659179688,
+      "y2": 1579.8717651367188,
+      "score": 0.3310016393661499,
+      "source": "gdino",
+      "prompt": "glass insulator . line post insulator . overhead line insulator . pin insulator . power line insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 466.94647216796875,
+      "y1": 1399.9085693359375,
+      "x2": 1359.6531982421875,
+      "y2": 5587.56201171875,
+      "score": 0.26256513595581055,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line support pole . power line pole . power pole . powerline tower . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 4267.5538330078125,
+      "y1": 4933.7724609375,
+      "x2": 4602.375244140625,
+      "y2": 6324.847900390625,
+      "score": 0.23592856526374817,
+      "source": "gdino",
+      "prompt": "distribution pole . line support pole . power pole . service pole . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 1079.51904296875,
+      "y1": 1458.9110260009766,
+      "x2": 1280.8042602539062,
+      "y2": 1675.4349975585938,
+      "score": 0.20061759650707245,
+      "source": "gdino",
+      "prompt": "glass insulator . line post insulator . overhead conductor insulator . pin-type insulator . power line insulator"
+    }
+  ]
+}

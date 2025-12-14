@@ -1,0 +1,106 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 1717.03125,
+        "y1": 2056.2989008319996,
+        "x2": 1823.7656245248,
+        "y2": 2404.430769312
+      },
+      "confidence": 0.63,
+      "prompt_variants": [
+        "distribution pole",
+        "electricity pylon",
+        "overhead line support pole",
+        "power line pole",
+        "power line tower",
+        "transmission tower",
+        "utility pole"
+      ],
+      "notes": "Distant utility pole supporting overhead conductors (small in frame)."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 2914.3125,
+        "y1": 1801.0021974912,
+        "x2": 3025.6875,
+        "y2": 2098.0747250496
+      },
+      "confidence": 0.66,
+      "prompt_variants": [
+        "distribution pole",
+        "electricity pylon",
+        "overhead line support pole",
+        "power line pole",
+        "power line tower",
+        "transmission tower",
+        "utility pole"
+      ],
+      "notes": "Distant utility pole; appears slightly tilted due to camera angle."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3958.4531245248,
+        "y1": 1545.7054947840002,
+        "x2": 4037.34375,
+        "y2": 1856.703296448
+      },
+      "confidence": 0.6,
+      "prompt_variants": [
+        "distribution pole",
+        "electricity pylon",
+        "overhead line support pole",
+        "power line pole",
+        "power line tower",
+        "transmission tower",
+        "utility pole"
+      ],
+      "notes": "Utility pole in midground; no insulators clearly discernible at this distance."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4724.15625,
+        "y1": 1373.9604392448,
+        "x2": 4816.96875,
+        "y2": 1633.8989012544
+      },
+      "confidence": 0.56,
+      "prompt_variants": [
+        "distribution pole",
+        "electricity pylon",
+        "overhead line support pole",
+        "power line pole",
+        "power line tower",
+        "transmission tower",
+        "utility pole"
+      ],
+      "notes": "Small distant utility pole near horizon; structure partially obscured by haze."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5531.625,
+        "y1": 1243.9912085568,
+        "x2": 5582.6718754752,
+        "y2": 1425.0197801663999
+      },
+      "confidence": 0.51,
+      "prompt_variants": [
+        "distribution pole",
+        "electricity pylon",
+        "overhead line support pole",
+        "power line pole",
+        "power line tower",
+        "transmission tower",
+        "utility pole"
+      ],
+      "notes": "Very small distant utility pole; limited detail."
+    }
+  ]
+}

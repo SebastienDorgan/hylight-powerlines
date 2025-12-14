@@ -1,0 +1,74 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00005.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 5642.178192138672,
+      "y1": 2488.7593536376953,
+      "x2": 5767.605865478516,
+      "y2": 2603.4180908203125,
+      "score": 0.6083533763885498,
+      "source": "gdino",
+      "prompt": "distribution insulator . glass insulator . overhead line insulator . pin insulator . pole-top insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5437.863166809082,
+      "y1": 2006.4783782958984,
+      "x2": 5561.726104736328,
+      "y2": 2118.2535095214844,
+      "score": 0.6019020080566406,
+      "source": "gdino",
+      "prompt": "distribution insulator . glass insulator . overhead line insulator . pin insulator . pole-top insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5167.925552368164,
+      "y1": 2131.66015625,
+      "x2": 5289.542877197266,
+      "y2": 2260.5772399902344,
+      "score": 0.33858004212379456,
+      "source": "gdino",
+      "prompt": "distribution insulator . glass insulator . overhead line insulator . pin insulator . pole-top insulator . power line insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 5303.052536010742,
+      "y1": 3699.845703125,
+      "x2": 5508.818908691406,
+      "y2": 5551.196044921875,
+      "score": 0.2633410394191742,
+      "source": "gdino",
+      "prompt": "electric distribution pole . overhead line pole . power line support pole . power pole . utility pole . wooden power pole"
+    },
+    {
+      "label": "tower",
+      "x1": 5028.2645263671875,
+      "y1": 2080.8125,
+      "x2": 5510.349182128906,
+      "y2": 6133.06689453125,
+      "score": 0.24538959562778473,
+      "source": "gdino",
+      "prompt": "electric distribution pole . overhead line pole . power line support pole . power pole . utility pole . wooden power pole"
+    },
+    {
+      "label": "tower",
+      "x1": 927.0280303955078,
+      "y1": 2426.65087890625,
+      "x2": 1101.8519287109375,
+      "y2": 5356.484375,
+      "score": 0.2249315232038498,
+      "source": "gdino",
+      "prompt": "electric distribution pole . overhead line pole . power line support pole . power pole . utility pole . wooden power pole"
+    }
+  ]
+}

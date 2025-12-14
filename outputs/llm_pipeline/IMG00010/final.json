@@ -1,0 +1,84 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00010.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "damper",
+      "x1": 2.8288989067077637,
+      "y1": 4875.420166015625,
+      "x2": 180.1670684814453,
+      "y2": 5075.667785644531,
+      "score": 0.3775492310523987,
+      "source": "gdino",
+      "prompt": "aeolian vibration damper . conductor damper . helical line damper . line vibration suppressor . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "damper",
+      "x1": 7793.826232910156,
+      "y1": 994.2441101074219,
+      "x2": 8005.029144287109,
+      "y2": 1164.5633850097656,
+      "score": 0.3190852999687195,
+      "source": "gdino",
+      "prompt": "Stockbridge damper . aeolian vibration damper . conductor damper . helical line damper . line vibration suppressor . spiral vibration damper . vibration damper"
+    },
+    {
+      "label": "tower",
+      "x1": 4929.59130859375,
+      "y1": 2070.495849609375,
+      "x2": 5598.626220703125,
+      "y2": 5940.05810546875,
+      "score": 0.2693246901035309,
+      "source": "gdino",
+      "prompt": "distribution pole . overhead line support pole . power line pole . power pole . powerline structure . utility pole . wooden power pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 5461.500030517578,
+      "y1": 2554.91162109375,
+      "x2": 5602.712707519531,
+      "y2": 2706.3456420898438,
+      "score": 0.25894829630851746,
+      "source": "gdino",
+      "prompt": "ceramic insulator . line insulator . overhead conductor insulator . pin insulator . post insulator . power line insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5202.621963500977,
+      "y1": 2076.155548095703,
+      "x2": 5355.895782470703,
+      "y2": 2219.883087158203,
+      "score": 0.23475421965122223,
+      "source": "gdino",
+      "prompt": "ceramic insulator . glass insulator . line insulator . overhead conductor insulator . pin insulator . post insulator . power line insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 7035.329528808594,
+      "y1": 2849.2218017578125,
+      "x2": 7643.962158203125,
+      "y2": 4918.5888671875,
+      "score": 0.21966341137886047,
+      "source": "gdino",
+      "prompt": "distribution pole . line support pole . overhead power pole . power pole . utility pole . wooden pole (power line)"
+    },
+    {
+      "label": "insulator",
+      "x1": 4943.054473876953,
+      "y1": 2251.988510131836,
+      "x2": 5071.173004150391,
+      "y2": 2379.3377075195312,
+      "score": 0.2163940668106079,
+      "source": "gdino",
+      "prompt": "ceramic insulator . line insulator . overhead line insulator . pin insulator . post insulator . power line insulator"
+    }
+  ]
+}

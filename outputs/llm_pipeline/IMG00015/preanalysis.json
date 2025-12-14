@@ -1,0 +1,26 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "damper",
+      "box": {
+        "x1": 7425.0,
+        "y1": 4827.4285713984,
+        "x2": 9503.0,
+        "y2": 5871.824175571201
+      },
+      "confidence": 0.67,
+      "prompt_variants": [
+        "helical line damper",
+        "spiral anti-vibration device",
+        "spiral cable damper",
+        "spiral line marker (bird diverter)",
+        "spiral vibration damper",
+        "transmission line damper",
+        "vibration damper on power line"
+      ],
+      "notes": "White helical/spiral device attached to a conductor near the right edge of the image."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4547.8125,
+        "y1": 2088.7912087912086,
+        "x2": 5940.0,
+        "y2": 6312.791208791209
+      },
+      "confidence": 0.68,
+      "prompt_variants": [
+        "distribution pole",
+        "electric line pole",
+        "line support structure",
+        "overhead line support pole",
+        "power line tower (pole)",
+        "power pole",
+        "utility pole"
+      ],
+      "notes": "Single distribution pole with crossarm and mounted equipment; image is noticeably blurred."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4631.34375,
+        "y1": 2297.6703296703295,
+        "x2": 4807.6875,
+        "y2": 2692.21978021978
+      },
+      "confidence": 0.6,
+      "prompt_variants": [
+        "composite insulator",
+        "distribution line insulator",
+        "overhead line insulator",
+        "polymer insulator",
+        "porcelain insulator",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Hanging insulator near the left end of the top crossarm."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5216.0625,
+        "y1": 2413.714285714286,
+        "x2": 5406.328125,
+        "y2": 2692.21978021978
+      },
+      "confidence": 0.58,
+      "prompt_variants": [
+        "composite insulator",
+        "distribution line insulator",
+        "overhead line insulator",
+        "polymer insulator",
+        "porcelain insulator",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Hanging insulator near the pole/top crossarm area."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5777.578125,
+        "y1": 2483.3406593406594,
+        "x2": 6009.609375,
+        "y2": 2715.428571428571
+      },
+      "confidence": 0.52,
+      "prompt_variants": [
+        "composite insulator",
+        "distribution line insulator",
+        "overhead line insulator",
+        "polymer insulator",
+        "porcelain insulator",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Isolated insulator-like component visible to the right of the pole (blurred)."
+    }
+  ]
+}

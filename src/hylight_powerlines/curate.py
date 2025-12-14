@@ -1,3 +1,5 @@
+"""Dataset curation utilities for merged YOLO detection datasets."""
+
 import logging
 import shutil
 from collections.abc import Iterable, Sequence
@@ -7,6 +9,7 @@ from typing import Any
 import yaml
 
 LOG = logging.getLogger(__name__)
+
 
 def _load_class_names(data_yaml: Path) -> list[str]:
     """Load class names from a YOLO data.yaml (supports list or dict)."""
@@ -131,7 +134,7 @@ def curate_detection_dataset(
         dest_root: Destination root for curated dataset.
         keep_sources: Iterable of dataset prefixes to keep
                       (e.g. 'electric_pole_merged', ...).
-        drop_class: Class name to remove from the dataset (e.g. 'spacer').
+        drop_classes: Class names to remove from the dataset (e.g. ['spacer']).
     """
     source_root = source_root.expanduser().resolve()
     dest_root = dest_root.expanduser().resolve()
@@ -148,8 +151,8 @@ def curate_detection_dataset(
     # Load class names and build id map (drop 'spacer', renumber others)
     old_names = _load_class_names(data_yaml)
     id_map, new_names = _build_id_map(old_names, drop_classes=drop_classes)
-    LOG.info("Old classes:", old_names)
-    LOG.info(f"New classes (after dropping {drop_classes!r}):", new_names)
+    LOG.info("Old classes: %s", old_names)
+    LOG.info("New classes (after dropping %r): %s", drop_classes, new_names)
 
     # Copy/curate data split by split
     for split in ("train", "val", "test"):

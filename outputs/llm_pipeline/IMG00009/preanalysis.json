@@ -1,0 +1,139 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 5011.877376,
+        "y1": 2576.173248,
+        "x2": 5800.785408,
+        "y2": 6335.0
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "line support structure",
+        "overhead line tower",
+        "power line pole",
+        "power pylon",
+        "utility pole"
+      ],
+      "notes": "Main line support pole with metal top bracket."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 6612.892704,
+        "y1": 3342.0689279999997,
+        "x2": 7123.362048,
+        "y2": 5152.352832
+      },
+      "confidence": 0.85,
+      "prompt_variants": [
+        "distribution pole",
+        "line structure",
+        "overhead line pole",
+        "power line pole",
+        "support pole",
+        "utility pole"
+      ],
+      "notes": "Secondary pole with crossarm near road."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5067.561312,
+        "y1": 2766.48768,
+        "x2": 5234.622624,
+        "y2": 2938.231296
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Left-side pin insulator on top bracket."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5327.438688,
+        "y1": 2590.099776,
+        "x2": 5489.862048,
+        "y2": 2729.3523840000003
+      },
+      "confidence": 0.83,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Top insulator at apex of pole head."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5568.754752,
+        "y1": 2975.366592,
+        "x2": 5735.816064000001,
+        "y2": 3137.827968
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "ceramic insulator",
+        "glass insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "post insulator",
+        "power line insulator"
+      ],
+      "notes": "Right-side pin insulator on top bracket."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 7053.754752,
+        "y1": 1708.1665919999998,
+        "x2": 7355.392704,
+        "y2": 1879.910208
+      },
+      "confidence": 0.72,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "conductor damper",
+        "helical line damper",
+        "line vibration suppressor",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Spiral/helical vibration damper on conductor."
+    },
+    {
+      "label": "damper",
+      "box": {
+        "x1": 1577.8160639999999,
+        "y1": 4975.964928,
+        "x2": 1925.8620480000002,
+        "y2": 5198.770368
+      },
+      "confidence": 0.74,
+      "prompt_variants": [
+        "Stockbridge damper",
+        "conductor damper",
+        "helical line damper",
+        "line vibration suppressor",
+        "spiral vibration damper",
+        "vibration damper"
+      ],
+      "notes": "Spiral/helical vibration damper on conductor."
+    }
+  ]
+}

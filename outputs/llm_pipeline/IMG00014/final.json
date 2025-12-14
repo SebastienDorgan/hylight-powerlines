@@ -1,0 +1,64 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00014.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 3243.6690063476562,
+      "y1": 1361.0003051757812,
+      "x2": 3507.8544921875,
+      "y2": 1621.0227661132812,
+      "score": 0.521122932434082,
+      "source": "gdino",
+      "prompt": "disc insulator . electric insulator . glass disc insulator . overhead line insulator . power line insulator . suspension insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 3110.49853515625,
+      "y1": 725.9727783203125,
+      "x2": 3853.326904296875,
+      "y2": 3277.041015625,
+      "score": 0.40024253726005554,
+      "source": "gdino",
+      "prompt": "distribution pole . electric line pole . overhead line support pole . power line pole . power pole . utility pole"
+    },
+    {
+      "label": "insulator",
+      "x1": 3110.5624389648438,
+      "y1": 726.0426025390625,
+      "x2": 3398.163818359375,
+      "y2": 1052.6650390625,
+      "score": 0.22814728319644928,
+      "source": "gdino",
+      "prompt": "disc insulator . electric insulator . glass disc insulator . overhead line insulator . power line insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 3449.8653564453125,
+      "y1": 2271.65234375,
+      "x2": 3751.6358032226562,
+      "y2": 2576.6110229492188,
+      "score": 0.20832353830337524,
+      "source": "gdino",
+      "prompt": "disc insulator . electric insulator . glass disc insulator . overhead line insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 4057.0311889648438,
+      "y1": 1805.53125,
+      "x2": 4921.0689697265625,
+      "y2": 2692.353515625,
+      "score": 0.20158596336841583,
+      "source": "gdino",
+      "prompt": "distribution pole . line support post . overhead cable pole . power pole . service pole . utility pole"
+    }
+  ]
+}

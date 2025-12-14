@@ -1,0 +1,84 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00011.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 8381.01727463305,
+      "y1": 2569.0069876909256,
+      "x2": 8438.402877807617,
+      "y2": 2677.4094467163086,
+      "score": 0.27992331981658936,
+      "source": "gdino",
+      "prompt": "line insulator . overhead line insulator . post insulator . power line insulator . strain insulator . wire insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4701.121551513672,
+      "y1": 1483.4400329589844,
+      "x2": 4866.787841796875,
+      "y2": 1664.8006286621094,
+      "score": 0.27015167474746704,
+      "source": "gdino",
+      "prompt": "ceramic insulator . glass disc insulator . overhead line insulator . power line insulator . strain insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4501.063568115234,
+      "y1": 834.3145751953125,
+      "x2": 4656.994323730469,
+      "y2": 1002.9067687988281,
+      "score": 0.26913464069366455,
+      "source": "gdino",
+      "prompt": "ceramic insulator . glass disc insulator . overhead line insulator . power line insulator . strain insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 8300.001663208008,
+      "y1": 2454.883476257324,
+      "x2": 8369.603424072266,
+      "y2": 2502.0,
+      "score": 0.23486186563968658,
+      "source": "gdino",
+      "prompt": "line post insulator . overhead line insulator . pin insulator . polymer insulator . power line insulator . strain insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4613.33171081543,
+      "y1": 785.7781982421875,
+      "x2": 4768.295745849609,
+      "y2": 937.2041625976562,
+      "score": 0.22394144535064697,
+      "source": "gdino",
+      "prompt": "ceramic insulator . glass disc insulator . overhead line insulator . power line insulator . strain insulator . suspension insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 7970.939910888672,
+      "y1": 2399.4671630859375,
+      "x2": 8597.097900390625,
+      "y2": 4554.68994140625,
+      "score": 0.21514065563678741,
+      "source": "gdino",
+      "prompt": "distribution pole . line support pole . power line pole . power pole . pylon . utility pole"
+    },
+    {
+      "label": "tower",
+      "x1": 4482.884857177734,
+      "y1": 750.58740234375,
+      "x2": 4877.720520019531,
+      "y2": 5039.46044921875,
+      "score": 0.2113397717475891,
+      "source": "gdino",
+      "prompt": "distribution pole . line support pole . power line pole . power pole . pylon . utility pole"
+    }
+  ]
+}

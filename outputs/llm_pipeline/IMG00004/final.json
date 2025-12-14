@@ -1,0 +1,54 @@
+{
+  "image": "/home/seb/Documents/1-HyLight/hylight-powerlines/assets/images/IMG00004.JPG",
+  "image_w": 9504,
+  "image_h": 6336,
+  "targets": [
+    "tower",
+    "insulator",
+    "damper",
+    "spacer",
+    "tower_plate"
+  ],
+  "final_boxes": [
+    {
+      "label": "insulator",
+      "x1": 3959.4871215820312,
+      "y1": 1923.0784301757812,
+      "x2": 4101.653472900391,
+      "y2": 2101.2332153320312,
+      "score": 0.6622233986854553,
+      "source": "gdino",
+      "prompt": "HV insulator . disc insulator . glass insulator . overhead line insulator string . power line insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 5142.013244628906,
+      "y1": 1931.5341491699219,
+      "x2": 5284.634185791016,
+      "y2": 2108.8764038085938,
+      "score": 0.6588984131813049,
+      "source": "gdino",
+      "prompt": "HV insulator . disc insulator . glass insulator . overhead line insulator string . power line insulator . suspension insulator"
+    },
+    {
+      "label": "insulator",
+      "x1": 4559.1429443359375,
+      "y1": 1944.0035705566406,
+      "x2": 4701.769256591797,
+      "y2": 2119.0770874023438,
+      "score": 0.5568478107452393,
+      "source": "gdino",
+      "prompt": "HV insulator . disc insulator . glass insulator . overhead line insulator string . power line insulator . suspension insulator"
+    },
+    {
+      "label": "tower",
+      "x1": 3922.0863037109375,
+      "y1": 1639.7574462890625,
+      "x2": 5283.73291015625,
+      "y2": 5652.1943359375,
+      "score": 0.3835735023021698,
+      "source": "gdino",
+      "prompt": "distribution pole . electric line pole . overhead line pole with crossarm . power line support structure . power pole . utility pole . wooden power pole"
+    }
+  ]
+}

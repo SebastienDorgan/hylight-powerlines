@@ -1,0 +1,101 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 2970.0,
+        "y1": 673.054272,
+        "x2": 3898.122624,
+        "y2": 3388.486464
+      },
+      "confidence": 0.86,
+      "prompt_variants": [
+        "distribution pole",
+        "electric line pole",
+        "overhead line support pole",
+        "power line pole",
+        "power pole",
+        "utility pole"
+      ],
+      "notes": "Main overhead line support pole with multiple insulators."
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 4130.15328,
+        "y1": 1833.4926719999999,
+        "x2": 5197.5,
+        "y2": 2854.678464
+      },
+      "confidence": 0.72,
+      "prompt_variants": [
+        "distribution pole",
+        "line support post",
+        "overhead cable pole",
+        "power pole",
+        "service pole",
+        "utility pole"
+      ],
+      "notes": "Smaller pole/stub with crossarm hardware near the roadside."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3016.4080320000003,
+        "y1": 696.26304,
+        "x2": 3526.877376,
+        "y2": 1137.229632
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "disc insulator",
+        "electric insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Top disc-shaped insulator on the main pole."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3109.214592,
+        "y1": 1206.855936,
+        "x2": 3642.892704,
+        "y2": 1740.6576
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "disc insulator",
+        "electric insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Middle disc-shaped insulator on the main pole."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3318.0459840000003,
+        "y1": 2135.2066560000003,
+        "x2": 3874.92336,
+        "y2": 2669.00832
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "disc insulator",
+        "electric insulator",
+        "glass disc insulator",
+        "overhead line insulator",
+        "power line insulator",
+        "strain insulator"
+      ],
+      "notes": "Lower disc-shaped insulator on the main pole."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 3805.3125,
+        "y1": 1554.989010989011,
+        "x2": 5336.71875,
+        "y2": 5653.661538461539
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "distribution pole",
+        "electric line pole",
+        "overhead line pole with crossarm",
+        "power line support structure",
+        "power pole",
+        "utility pole",
+        "wooden power pole"
+      ],
+      "notes": "Single wooden distribution pole with crossarm and mounted equipment."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3949.171875,
+        "y1": 1819.5692307692307,
+        "x2": 4134.796875,
+        "y2": 2204.835164835165
+      },
+      "confidence": 0.88,
+      "prompt_variants": [
+        "HV insulator",
+        "disc insulator",
+        "glass insulator",
+        "overhead line insulator string",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Left green glass suspension insulator beneath crossarm."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4557.09375,
+        "y1": 1810.2857142857142,
+        "x2": 4752.0,
+        "y2": 2200.1934065934065
+      },
+      "confidence": 0.87,
+      "prompt_variants": [
+        "HV insulator",
+        "disc insulator",
+        "glass insulator",
+        "overhead line insulator string",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Center green glass suspension insulator."
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 5113.96875,
+        "y1": 1810.2857142857142,
+        "x2": 5271.75,
+        "y2": 2204.835164835165
+      },
+      "confidence": 0.87,
+      "prompt_variants": [
+        "HV insulator",
+        "disc insulator",
+        "glass insulator",
+        "overhead line insulator string",
+        "power line insulator",
+        "suspension insulator"
+      ],
+      "notes": "Right green glass suspension insulator."
+    }
+  ]
+}
