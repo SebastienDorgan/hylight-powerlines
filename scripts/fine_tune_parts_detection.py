@@ -2,7 +2,7 @@ from pathlib import Path
 
 from ultralytics import YOLO
 
-from hylight_powerlines.yolo import YoloFineTuner
+from hylight_powerlines.yolo.wrappers import YoloFineTuner
 
 
 def main() -> None:

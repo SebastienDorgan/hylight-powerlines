@@ -120,19 +120,19 @@ Docstrings/Comments:
 
 YOLO Training:
 ```
-python -c "from pathlib import Path; from hylight_powerlines.yolo import YoloFineTuner as T;\
+python -c "from pathlib import Path; from hylight_powerlines.yolo.wrappers import YoloFineTuner as T;\
 T(Path('data/your_rf_export')).train()"
 ```
 
 YOLO Inference:
 ```
-python -c "from pathlib import Path; from hylight_powerlines.yolo import YoloPredictor as P;\
+python -c "from pathlib import Path; from hylight_powerlines.yolo.wrappers import YoloPredictor as P;\
 P(Path('runs/your_run/weights/best.pt')).predict_on_folder('data/images')"
 ```
 
 Roboflow Download (ZIP only):
 ```
-python -c "from pathlib import Path; from hylight_powerlines.roboflow import RoboflowDownloader as R;\
+python -c "from pathlib import Path; from hylight_powerlines.datasets.roboflow import RoboflowDownloader as R;\
 R('workspace','project',version=None,export_format='yolov8').download_dataset(Path('data/ds.zip'))"
 ```
 

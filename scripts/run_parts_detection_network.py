@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from hylight_powerlines.yolo import YoloPredictor
+from hylight_powerlines.yolo.wrappers import YoloPredictor
 
 if __name__ == "__main__":
     predictor = YoloPredictor(

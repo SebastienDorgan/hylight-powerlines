@@ -1,11 +1,9 @@
-from __future__ import annotations
-
 from pathlib import Path
 
 import httpx
 import pytest
 
-from hylight_powerlines.roboflow import RoboflowDownloader
+from hylight_powerlines.datasets.roboflow import RoboflowDownloader
 
 
 def test_roboflow_export_format_validation() -> None:

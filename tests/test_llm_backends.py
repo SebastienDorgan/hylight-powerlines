@@ -1,14 +1,12 @@
-from __future__ import annotations
-
 from contextlib import contextmanager
 from typing import Any
 
 import numpy as np
 from PIL import Image
 
-from hylight_powerlines.llm.gdino import GroundingDinoHF
-from hylight_powerlines.llm.models import Box
-from hylight_powerlines.llm.sam2 import Sam2Segmenter
+from hylight_powerlines.detectors.gdino_hf import GroundingDinoHF
+from hylight_powerlines.detectors.sam2 import Sam2Segmenter
+from hylight_powerlines.vision.types import Box
 
 
 class _FakeTorchCuda:

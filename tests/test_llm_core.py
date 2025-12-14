@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import base64
 import json
 from pathlib import Path
@@ -9,12 +7,12 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from hylight_powerlines.llm.geometry import expand_box, iou, nms, tight_box_from_mask
-from hylight_powerlines.llm.image import crop_with_box, img_to_b64_jpeg
-from hylight_powerlines.llm.models import Box
-from hylight_powerlines.llm.vis import draw_boxes
-from hylight_powerlines.llm.vlm import _extract_json, pre_analyze
-from hylight_powerlines.llm.yolo_export import export_yolo
+from hylight_powerlines.detectors.vlm_litellm import _extract_json, pre_analyze
+from hylight_powerlines.vision.export_yolo import export_yolo
+from hylight_powerlines.vision.geometry import expand_box, iou, nms, tight_box_from_mask
+from hylight_powerlines.vision.image import crop_with_box, img_to_b64_jpeg
+from hylight_powerlines.vision.types import Box
+from hylight_powerlines.vision.vis import draw_boxes
 
 
 def test_box_area_and_clip() -> None:
@@ -103,7 +101,7 @@ def test_pre_analyze_with_injected_completion() -> None:
             ],
         }
 
-    import hylight_powerlines.llm.vlm as vlm
+    import hylight_powerlines.detectors.vlm_litellm as vlm
 
     old = vlm.litellm.responses
     vlm.litellm.responses = fake_responses  # type: ignore[assignment]
@@ -161,7 +159,7 @@ def test_pre_analyze_accepts_pydantic_completion_model() -> None:
             ],
         )
 
-    import hylight_powerlines.llm.vlm as vlm
+    import hylight_powerlines.detectors.vlm_litellm as vlm
 
     old = vlm.litellm.responses
     vlm.litellm.responses = fake_completion  # type: ignore[assignment]
@@ -210,7 +208,7 @@ def test_pre_analyze_scales_normalized_boxes() -> None:
             ],
         }
 
-    import hylight_powerlines.llm.vlm as vlm
+    import hylight_powerlines.detectors.vlm_litellm as vlm
 
     old = vlm.litellm.responses
     vlm.litellm.responses = fake_responses  # type: ignore[assignment]

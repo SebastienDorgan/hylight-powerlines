@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 from pathlib import Path
 
-from hylight_powerlines.yolo import YoloFineTuner
+from hylight_powerlines.yolo.wrappers import YoloFineTuner
 
 
 def main() -> None:
