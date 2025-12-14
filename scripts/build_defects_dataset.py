@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from hylight_powerlines.merge import merge_yolo_datasets
+from hylight_powerlines.datasets.merge import merge_yolo_datasets
 
 
 def main() -> None:

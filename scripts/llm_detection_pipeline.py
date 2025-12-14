@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch runner for the hylight_powerlines.llm pipeline.
+"""Batch runner for the VLM → Grounding DINO → optional SAM2 pipeline.
 
 This script is intended to be "zero-config" for the common case:
 - Scans JPG/JPEG images under `assets/images/`.
@@ -32,7 +32,7 @@ from typing import NotRequired, TypedDict, cast
 import yaml
 from PIL import Image
 
-from hylight_powerlines.llm.pipeline import PipelineConfig, run_pipeline
+from hylight_powerlines.pipelines.vlm_gdino import PipelineConfig, run_pipeline
 
 
 def _iter_jpgs(images_dir: Path) -> list[Path]:

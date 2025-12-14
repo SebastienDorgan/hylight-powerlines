@@ -1,0 +1,102 @@
+{
+  "image_w": 9504,
+  "image_h": 6336,
+  "proposals": [
+    {
+      "label": "tower",
+      "box": {
+        "x1": 2946.7968754752,
+        "y1": 0.0,
+        "x2": 5058.28125,
+        "y2": 3736.6153843392
+      },
+      "confidence": 0.92,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line support structure",
+        "power line pole",
+        "power pole",
+        "powerline support",
+        "utility pole",
+        "wooden utility pole"
+      ],
+      "notes": "main wooden pole with crossarm/hardware"
+    },
+    {
+      "label": "tower",
+      "box": {
+        "x1": 1995.46875,
+        "y1": 0.0,
+        "x2": 2204.2968754752,
+        "y2": 1903.1208793344001
+      },
+      "confidence": 0.7,
+      "prompt_variants": [
+        "distribution pole",
+        "overhead line pole",
+        "power pole",
+        "support pole",
+        "utility pole",
+        "wood pole"
+      ],
+      "notes": "secondary wooden pole segment at left"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 3225.2343754752,
+        "y1": 524.5186814208,
+        "x2": 3494.3906245248,
+        "y2": 789.098900832
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "disc insulator",
+        "glass disc insulator",
+        "line insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "power line insulator"
+      ],
+      "notes": "left insulator on crossarm"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4014.1406245248,
+        "y1": 0.0,
+        "x2": 4329.7031245248,
+        "y2": 162.4615382016
+      },
+      "confidence": 0.75,
+      "prompt_variants": [
+        "disc insulator",
+        "glass disc insulator",
+        "insulator unit",
+        "line post insulator",
+        "overhead line insulator",
+        "power line insulator"
+      ],
+      "notes": "top insulator (partially cut off at image top)"
+    },
+    {
+      "label": "insulator",
+      "box": {
+        "x1": 4547.8125,
+        "y1": 0.0,
+        "x2": 4849.4531245248,
+        "y2": 250.6549453056
+      },
+      "confidence": 0.9,
+      "prompt_variants": [
+        "disc insulator",
+        "glass disc insulator",
+        "line insulator",
+        "overhead line insulator",
+        "pin-type insulator",
+        "power line insulator"
+      ],
+      "notes": "right insulator on crossarm"
+    }
+  ]
+}

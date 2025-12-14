@@ -1,7 +1,7 @@
 import zipfile
 from pathlib import Path
 
-from hylight_powerlines.roboflow import ExportFormat, RoboflowDownloader
+from hylight_powerlines.datasets.roboflow import ExportFormat, RoboflowDownloader
 
 
 def extract_zip(zip_path: Path, extract_to: Path) -> None:

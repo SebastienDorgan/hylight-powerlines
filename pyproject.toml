@@ -11,6 +11,7 @@ dependencies = [
   "httpx>=0.28.1",
   "litellm>=1.80.9",
   "pillow>=12.0.0",
+  "sahi>=0.11.36",
   "sam2>=1.1.0",
   "shapely>=2.1.2",
   "transformers>=4.57.3",

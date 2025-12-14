@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 from pathlib import Path
 
 import pytest
 
-from hylight_powerlines.merge import coords_to_detection_bbox, merge_yolo_datasets
+from hylight_powerlines.datasets.merge import coords_to_detection_bbox, merge_yolo_datasets
 
 
 def _write_text(path: Path, text: str) -> None:

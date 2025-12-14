@@ -1,11 +1,9 @@
-from __future__ import annotations
-
 from pathlib import Path
 
 import pytest
 import yaml
 
-from hylight_powerlines.curate import (
+from hylight_powerlines.datasets.curate import (
     _build_id_map,
     _dataset_prefix,
     _load_class_names,

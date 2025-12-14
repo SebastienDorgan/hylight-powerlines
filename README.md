@@ -11,11 +11,12 @@ Automated pipeline to detect power‑line components and defects using Ultralyti
 
 ## Repository Structure
 - `src/hylight_powerlines/`
-  - `yolo.py` – thin wrappers for fine‑tuning and inference (`YoloFineTuner`, `YoloPredictor`).
-  - `roboflow.py` – `RoboflowDownloader` to fetch exports as ZIPs and resolve latest versions.
-  - `merge.py` – merge multiple YOLO exports into a unified dataset (segmentation → bbox).
-  - `curate.py` – curate merged datasets (keep sources, drop classes, rebuild `data.yaml`).
-  - `llm/` – VLM pre-analysis + Grounding DINO refine + optional SAM2.
+  - `datasets/` – Roboflow download + dataset merge/curation utilities.
+  - `yolo/` – thin Ultralytics wrappers (`YoloFineTuner`, `YoloPredictor`).
+  - `vision/` – model-agnostic types + geometry + visualization + YOLO export.
+  - `preprocessing/` – tiling and other pre-processing steps (e.g. SAHI).
+  - `detectors/` – adapters for external models/libraries (LiteLLM VLM, Grounding DINO, SAM2).
+  - `pipelines/` – orchestration pipelines (VLM→GDINO→SAM2, SAHI→GDINO).
 - `scripts/`
   - `download_all_training_datasets.py` – fetch selected Roboflow datasets to `data/external/`.
   - `build_detection_dataset.py` – merge component datasets → `data/detection_dataset/`.
@@ -24,6 +25,7 @@ Automated pipeline to detect power‑line components and defects using Ultralyti
   - `fine_tune_parts_detection.py` – train component detector.
   - `fine_tune_defects_detection.py` – train defect detector.
   - `llm_detection_pipeline.py` – batch “powerline parts” detection over `assets/images/` (writes `outputs/`).
+  - `sahi_gdino_pipeline.py` – batch SAHI tiling → Grounding DINO detection over `assets/images/`.
   - `run_parts_detection_network.py` – example YOLO inference runner over `assets/images/`.
   - `download_test_data.py` – pull sample images from Google Drive (service account; optional dependency).
 - `data/`
@@ -109,7 +111,7 @@ Use this to keep only selected source subsets and optionally drop classes. It al
 ## Inference
 - Python API via `YoloPredictor` (use your trained weights):
   ```python
-  from hylight_powerlines.yolo import YoloPredictor
+  from hylight_powerlines.yolo.wrappers import YoloPredictor
 
   predictor = YoloPredictor(
       weights="runs/powerlines/yolov8s-6cls/weights/best.pt",

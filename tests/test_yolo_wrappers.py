@@ -1,12 +1,10 @@
-from __future__ import annotations
-
 from collections.abc import Iterable
 from pathlib import Path
 from typing import Any
 
 import pytest
 
-from hylight_powerlines.yolo import YoloFineTuner, YoloPredictor
+from hylight_powerlines.yolo.wrappers import YoloFineTuner, YoloPredictor
 
 
 class _FakeYolo:

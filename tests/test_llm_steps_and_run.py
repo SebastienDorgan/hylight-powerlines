@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import json
 from pathlib import Path
 
@@ -7,9 +5,9 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from hylight_powerlines.llm.models import Box, PipelineConfig, PreAnalysis, Proposal
-from hylight_powerlines.llm.pipeline import run_pipeline
-from hylight_powerlines.llm.steps import refine_with_gdino, refine_with_sam2
+from hylight_powerlines.pipelines.steps import refine_with_gdino, refine_with_sam2
+from hylight_powerlines.pipelines.vlm_gdino import PipelineConfig, run_pipeline
+from hylight_powerlines.vision.types import Box, PreAnalysis, Proposal
 
 
 class _FakeGdino:

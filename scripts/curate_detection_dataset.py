@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from hylight_powerlines.curate import curate_detection_dataset
+from hylight_powerlines.datasets.curate import curate_detection_dataset
 
 
 def main() -> None:
